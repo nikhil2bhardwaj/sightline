@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIGHTLINE™ PRO— Official Manual</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg-app:#F5F6F3;--bg-bento:#EAECE8;--bg-white:#FFFFFF;--obsidian:#141517;--obsidian-soft:#232529;--gold:#E6D595;--lime:#E8F886;--text-main:#141517;--text-muted:#6E746D;--border-soft:#DCE0D9;--danger-soft:#FCE8EC;--danger-text:#B42343;--indigo-soft:#EEF2FF;--indigo-text:#4338CA;--amber-soft:#FEF3C7;--amber-text:#B45309;--emerald-soft:#D1FAE5;--emerald-text:#065F46;--violet-soft:#F3E8FF;--violet-text:#6D28D9;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg-app);color:var(--text-main);font-family:'Plus Jakarta Sans',-apple-system,sans-serif;line-height:1.65;padding:28px;max-width:1400px;margin:0 auto;}
+.hero-bar{background:var(--obsidian);color:var(--bg-white);border-radius:28px;padding:26px 34px;display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:20px;box-shadow:0 16px 40px rgba(20,21,23,0.14);flex-wrap:wrap;}
+.hero-bar h1{font-size:28px;font-weight:800;letter-spacing:-0.6px;display:flex;align-items:center;gap:10px;}
+.lime-badge{background:var(--lime);color:var(--obsidian);font-size:12px;font-weight:800;padding:4px 12px;border-radius:999px;}
+.close-btn{background:var(--lime);color:var(--obsidian);border:none;cursor:pointer;font-weight:800;font-size:13px;padding:10px 22px;border-radius:999px;font-family:inherit;}
+.toc-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px;}
+.toc-pill{background:var(--bg-white);color:var(--obsidian);border:1px solid var(--border-soft);border-radius:999px;padding:7px 14px;font-size:12px;font-weight:700;text-decoration:none;transition:all .15s;}
+.toc-pill:hover{background:var(--obsidian);color:var(--lime);}
+.bento-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(430px,1fr));gap:18px;margin-bottom:24px;}
+.bento-card{background:var(--bg-bento);border-radius:24px;padding:22px;border:1px solid var(--border-soft);display:flex;flex-direction:column;gap:12px;}
+.bento-card.dark-card{background:var(--obsidian);color:var(--bg-white);}
+.bento-card.full-width{grid-column:1 / -1;}
+.bento-card h2{font-size:17.5px;font-weight:800;display:flex;align-items:center;gap:8px;}
+.sub-card{background:var(--bg-white);border-radius:16px;padding:14px 16px;border:1px solid var(--border-soft);font-size:13px;display:flex;flex-direction:column;gap:7px;}
+.dark-card .sub-card{background:var(--obsidian-soft);border-color:#34373D;color:#E5E7EB;}
+.wwh-tag{display:inline-block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.5px;padding:2px 8px;border-radius:999px;margin-right:6px;}
+.wwh-what{background:var(--indigo-soft);color:var(--indigo-text);}
+.wwh-when{background:var(--amber-soft);color:var(--amber-text);}
+.wwh-how{background:var(--emerald-soft);color:var(--emerald-text);}
+.wwh-pro{background:var(--violet-soft);color:var(--violet-text);}
+.icon-row{display:flex;align-items:flex-start;gap:12px;padding:7px 0;border-bottom:1px dashed rgba(150,150,150,0.25);font-size:12.5px;}
+.icon-row:last-child{border-bottom:none;}
+.rail-demo{width:32px;height:32px;border-radius:50%;background:#232529;color:var(--gold);border:1px solid rgba(230,213,149,0.35);display:inline-flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0;margin-top:2px;}
+code{background:rgba(20,21,23,0.08);padding:2px 6px;border-radius:6px;font-family:ui-monospace,Consolas,monospace;font-size:11.5px;font-weight:700;}
+.dark-card code{background:#111214;color:var(--lime);}
+.img-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px;margin-top:6px;}
+.manual-img{width:100%;border-radius:14px;border:1.5px solid var(--border-soft);cursor:zoom-in;transition:transform .15s,box-shadow .15s;background:#141517;}
+.manual-img:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,0.16);}
+#lightbox{position:fixed;inset:0;background:rgba(20,21,23,0.88);backdrop-filter:blur(6px);z-index:5000;display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out;}
+#lightbox img{max-width:95vw;max-height:92vh;border-radius:18px;border:2px solid var(--gold);box-shadow:0 24px 60px rgba(0,0,0,0.5);}
+.footer-bar{text-align:center;padding:20px;font-size:12px;font-weight:700;color:var(--text-muted);border-top:1px solid var(--border-soft);margin-top:12px;}
+</style>
+</head>
+<body>
+<header class="hero-bar">
+  <div>
+    <h1>SIGHTLINE<sup style="font-size:14px;color:var(--gold);margin-left:2px;">&trade;</sup> <span class="lime-badge">PRO</span></h1>
+    <p style="color:#9CA3AF;font-size:13px;margin-top:4px;">State, Inventory &amp; Graph-based Horizon Tracker for Localized Information &amp; Narrative Events &bull; Official User Manual &bull; &copy; 2026 Nikhil Bhardwaj</p>
+  </div>
+  <button class="close-btn" onclick="window.close()">✕ Close Manual</button>
+</header>
+
+<nav class="toc-bar">
+  <a class="toc-pill" href="#sec-rail">1. Left Rail Icons</a>
+  <a class="toc-pill" href="#sec-console">2. Console, Storylets &amp; Ingest</a>
+  <a class="toc-pill" href="#sec-topbar">3. Rashomon Lens, Provenance &amp; Heatmap</a>
+  <a class="toc-pill" href="#sec-merge">4. 3-Way Merger &amp; Diff Matrix</a>
+  <a class="toc-pill" href="#sec-manuscript">5. Manuscript Studio &amp; Exporters</a>
+  <a class="toc-pill" href="#sec-linter">6. Linter v6, MICE &amp; Chronology</a>
+  <a class="toc-pill" href="#sec-insights">7. Insights, Cadence &amp; Reverse-Causal</a>
+  <a class="toc-pill" href="#sec-lore">8. World Bible &amp; CoALA Memory</a>
+  <a class="toc-pill" href="#sec-cast">9. Cast, Rename &amp; 2-Mode Delete</a>
+  <a class="toc-pill" href="#sec-inspector">10. Inspector Tabs 1–3 (Audio &amp; Red-Team)</a>
+  <a class="toc-pill" href="#sec-stage">11. Tab 4: Dual 2D Stage Map</a>
+  <a class="toc-pill" href="#sec-cost">12. Cost Guide, API Stats &amp; Security</a>
+  <a class="toc-pill" href="#sec-faq">13. FAQ &amp; Troubleshooting</a>
+</nav>
+
+<div class="bento-grid">
+  <!-- SECTION 1: LEFT RAIL -->
+  <section class="bento-card dark-card" id="sec-rail">
+    <h2 style="color:var(--gold);">1. Left Obsidian Navigation Rail (All 17 Studio Icons)</h2>
+    <div class="sub-card">
+      <div class="icon-row"><span class="rail-demo">▶</span><div><strong>Sightline Console:</strong> Opens the left command drawer for Green Room staging, Storylet Deck, Tension Clocks, Parallel 2-Branch Runs, Demo/Synopsis Ingest, and AI Config.</div></div>
+      <div class="icon-row"><span class="rail-demo">⛶</span><div><strong>Fit Entire Flowchart:</strong> Auto-centers and scales the canvas so all state columns, branches, and Floating Beats fit on screen.</div></div>
+      <div class="icon-row"><span class="rail-demo">◎</span><div><strong>Jump to Active State:</strong> Pans and zooms directly to the Acid-Lime <code>YOU ARE HERE</code> state card.</div></div>
+      <div class="icon-row"><span class="rail-demo">◌</span><div><strong>Toggle Untouched Ghost Branches:</strong> Hides/shows unvisited alternate branches (<code>Branch B/C</code>). Any branch you load, edit, or merge is permanently promoted to a solid card.</div></div>
+      <div class="icon-row"><span class="rail-demo">≈</span><div><strong>Toggle Character Swimlanes:</strong> Shows/hides colored cubic-Bézier character progression threads across states.</div></div>
+      <div class="icon-row"><span class="rail-demo">🔥</span><div><strong>Todorov Pacing Heatmap PRO:</strong> Color-codes every State Card by its <code>0–100</code> Dramatic Tension Score (<code>Cold</code> Indigo, <code>Rising</code> Emerald, <code>Hot</code> Amber, <code>Climax</code> Crimson).</div></div>
+      <div class="icon-row"><span class="rail-demo">📌</span><div><strong>Floating Idea Nodes &amp; Reverse-Causal Solver PRO:</strong> Pin untethered future destination beats onto the canvas and compute 3 legal causal pathways from your current state.</div></div>
+      <div class="icon-row"><span class="rail-demo">⑂</span><div><strong>3-Way Branch Merger &amp; Meereenese Knot:</strong> Combine two timeline branches with per-character cherry-picking and arrival-order cover advantages.</div></div>
+      <div class="icon-row"><span class="rail-demo">⚖️</span><div><strong>Side-by-Side Epistemic Diff Matrix PRO:</strong> Compare any two State Cards (<code>Canon vs. Ghost</code>) side-by-side across locations, items, secrets, blind spots, and trust edges.</div></div>
+      <div class="icon-row"><span class="rail-demo">✎</span><div><strong>SIGHTLINE Manuscript Studio PRO:</strong> Disk-backed <code>/Manuscript</code> prose editor with Zen Mode, Fair-Play Reader Ledger, Leak Scanner, Retro-Con Sync, and <code>.fountain</code> / <code>.ink</code> / <code>.yarn</code> / <code>.doc</code> exporters.</div></div>
+      <div class="icon-row"><span class="rail-demo">💡</span><div><strong>Story Insights &amp; Voice Cadence Meter PRO:</strong> Audits Moral/Thematic Drift, surfaces Hidden-Gem Ghost Branches, profiles Director Instincts, and checks Voice Cadence / Flanderization.</div></div>
+      <div class="icon-row"><span class="rail-demo">🛡️</span><div><strong>Continuity Linter &amp; Micro-Chronology PRO:</strong> Audits Chekhov's Guns, Blind Spots, Sanderson MICE Threads, Revision Ripples, and Stuart Turton's Character &times; Time Timetable.</div></div>
+      <div class="icon-row"><span class="rail-demo">▤</span><div><strong>World Bible Lorebook:</strong> Add, edit, or delete deterministic Aho-Corasick lore entries in <code>World_Bible.md</code>.</div></div>
+      <div class="icon-row"><span class="rail-demo">◈</span><div><strong>CoALA Episodic Archive:</strong> Inspect compacted historical clauses, salience scores, and negative constraints in <code>Episodic_Archive.json</code>.</div></div>
+      <div class="icon-row"><span class="rail-demo">◫</span><div><strong>Toggle Sightline Inspector:</strong> Collapses/expands the Right Inspector panel for full-screen canvas space.</div></div>
+      <div class="icon-row"><span class="rail-demo">≡</span><div><strong>View Raw Markdown:</strong> Inspect and copy the raw <code>.md</code> state file for the selected card.</div></div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: SIGHTLINE CONSOLE, STORYLET DECK, PARALLEL RUN & INGEST -->
+  <section class="bento-card" id="sec-console">
+    <h2>2. Sightline Console, Storylet Deck, Parallel Run &amp; Auto-Ingest</h2>
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-what">WHAT</span><strong>Green Room Stage, Tension Clocks &amp; Parallel 2-Branch Runner</strong></div>
+      <div><span class="wwh-tag wwh-when">WHEN</span>Use <code>📌 Branch Selected</code> to branch from any clicked card, or <code>📍 Continue Active</code> to advance from <code>YOU ARE HERE</code>. Toggle <code>🌍 Mode: @world_turn</code> between chapters to advance off-screen factions in 1 GM call.</div>
+      <div><span class="wwh-tag wwh-how">HOW</span>
+        &bull; <strong>Green Room Stage:</strong> Click character chips to toggle them between the Active Stage (<code>#1</code>, <code>#2</code>, <code>#3</code>) and the Dormant Green Room (<code>💤</code>). Dormant characters consume <code>0 tokens</code> and are sliced out of active prompts so active characters never get meta-spoilers.<br>
+        &bull; <strong>🌌 Parallel 2-Branch Run PRO:</strong> Click <code>🌌 Parallel 2-Branch Run ▾</code> below the Run button, pick any two timeline states, and click <code>Execute Parallel Multi-Branch Run</code> to test your Scene Nudge across both timelines side-by-side!
+      </div>
+    </div>
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-pro">PRO</span><strong>🎴 Salience Storylet Deck, 🎬 Demo Loader, ⚡ Auto-Ingest &amp; 📦 .zip / Time-Capsule</strong></div>
+      <div><span class="wwh-tag wwh-how">HOW</span>
+        &bull; <strong>🎴 Salience Storylet Deck:</strong> Open <code>🎴 Salience Storylet Deck</code> to pre-write dramatic set-pieces with optional Location, Item, or Clock prerequisites. When the current state satisfies a card's prerequisites, it glows in Acid-Lime (<code>⚡ Ready</code>)—click it to inject its Scene Nudge into the Console!<br>
+        &bull; <strong>🎬 Load Demo &amp; ⚡ Auto-Ingest:</strong> Open <code>📂 Project, Demo, Ingest &amp; Backup</code>. Click <code>🎬 Load Demo: The Obsidian Express (0 LLM)</code> to scaffold a complete playable mystery in <code>0.0s</code>, or click <code>⚡ Auto-Ingest Synopsis / Chapter (1 GM)</code> to paste raw story text and automatically generate <code>Turn_0_Initial.md</code>, <code>World_Bible.md</code>, and <code>Voice_Anchors.md</code>!<br>
+        &bull; <strong>📦 Export .zip &amp; 🕰️ Time-Capsule:</strong> Click <code>📦 Export .zip</code> to download a timestamped archive of your entire project, or <code>🕰️ Time-Capsule</code> to export a read-only interactive HTML storyboard to share with editors.
+      </div>
+      <div class="img-grid">
+        <img src="screenshots/01.png" class="manual-img" alt="Sightline Console & Project Switcher" onclick="openLightbox(this.src)" onerror="this.style.display='none'">
+        <img src="screenshots/02.png" class="manual-img" alt="AI Provider & Asymmetric Models" onclick="openLightbox(this.src)" onerror="this.style.display='none'">
+        <img src="screenshots/18.png" class="manual-img" alt="Salience Storylet Deck & Auto-Ingest" onclick="openLightbox(this.src)" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: TOP BAR, RASHOMON LENS, ARTIFACT PROVENANCE & PACING HEATMAP -->
+  <section class="bento-card full-width" id="sec-topbar">
+    <h2>3. The Rashomon Reality Lens, Artifact Provenance &amp; Todorov Pacing Heatmap</h2>
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-pro">PRO</span><strong>👁️ The Rashomon Filter / Holographic POV Sandbox (<code>👁️ Lens: Omniscient ▾</code> in Top Bar)</strong></div>
+      <div><span class="wwh-tag wwh-when">WHEN</span>Use when writing a single-POV chapter or auditing whether a character has enough information to deduce a plot twist.</div>
+      <div><span class="wwh-tag wwh-how">HOW</span>Select any character (e.g. <code>👁️ POV: VICTOR KANE</code>) from the Top Bar dropdown. In <code>0.0s</code> (<code>0 LLM Calls</code>), the entire studio filters into that character's subjective reality:<br>
+        1. <strong>Unwitnessed Turn Dimming:</strong> Any state card where that character was <code>💤 Dormant</code> dims to grayscale.<br>
+        2. <strong>2D Stage Map Redaction:</strong> Characters in <code>✕ Blocked</code> zones or concealed behind cover become <code>? UNKNOWN</code> on the 2D Stage Map.<br>
+        3. <strong>👻 Violet Phantom Artifact Pills:</strong> If someone stole an item from the character without their knowledge (recorded in their <code>🙈 Blind Spots</code>), a dashed violet pill (<code>👻 Key</code>) appears on their row showing they still falsely believe they hold it!<br>
+        4. <strong>Inspector Mind-Shield:</strong> Clicking any other character redacts their Private Knowledge and Core Motivation so you only see what your POV character knows. Click <code>✕ Exit to Omniscient View</code> on the violet banner to return.
+      </div>
+    </div>
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-pro">PRO</span><strong>🏺 Artifact Provenance &amp; Clue Matrix (<code>🏺 Provenance</code> Button) + 🔥 Todorov Pacing Heatmap (<code>🔥</code> Rail Icon)</strong></div>
+      <div><span class="wwh-tag wwh-how">HOW</span>
+        &bull; <strong>🏺 Artifact Provenance ("Follow the MacGuffin"):</strong> Click <code>🏺 Provenance</code> in the Top Bar (or click any item pill like <code>🗝️ Key</code> or <code>📔 Ledger</code> on a character row) to trace that item across the entire story tree: where it was planted on Turn 0, every custody transfer between characters, its current zone, who secretly knows where it is, and who holds a <code>👻 Phantom Belief</code> about it.<br>
+        &bull; <strong>🔥 Todorov Pacing Heatmap:</strong> Click the <code>🔥</code> flame icon on the Left Rail to highlight every State Card with its <code>0–100</code> Dramatic Tension Score (computed from state deltas, clock fill ratios, hostility swings, and room convergences) so you can spot "Cold" pacing lulls vs. "Climax" spikes across your act structure.
+      </div>
+      <div class="img-grid">
+        <img src="screenshots/19.png" class="manual-img" alt="Rashomon Reality Lens, Phantom Pills & Artifact Provenance" onclick="openLightbox(this.src)" onerror="this.style.display='none'">
+        <img src="screenshots/19-1.png" class="manual-img" alt="Follow the MacGuffin" onclick="openLightbox(this.src)" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: 3-WAY MERGER, MEEREENESE KNOT & SIDE-BY-SIDE DIFF MATRIX -->
+  <section class="bento-card" id="sec-merge">
+    <h2>4. 3-Way Branch Merger ("Meereenese Knot") &amp; Diff Matrix</h2>
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-what">WHAT</span><strong>3-Way Timeline Convergence &amp; George R.R. Martin Arrival Order (<code>⑂</code> Icon)</strong></div>
+      <div><span class="wwh-tag wwh-how">HOW</span>
+        1. <strong>Step 1A &amp; 1B:</strong> Select Primary Timeline (Branch 1) and Secondary Timeline (Branch 2).<br>
+        2. <strong>Step 1C (Meereenese Knot Arrival Order — PRO):</strong> Choose <code>⚡ Simultaneous Arrival</code>, <code>🥇 Branch 1 Arrives First</code>, or <code>🥈 Branch 2 Arrives First</code>. SIGHTLINE automatically stamps who secured initial room cover and sightline advantage into Global World Facts!<br>
+        3. <strong>Step 2 &amp; 3:</strong> Cherry-pick which branch wins per character (or click <code>Synthesize Knowledge &amp; Items</code>) and click <code>💾 Save Merged State Card Only (0 LLM Calls)</code>.
+      </div>
+    </div>
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-pro">PRO</span><strong>⚖️ Side-by-Side "Ghost vs. Canon" Epistemic Diff Matrix (<code>⚖️</code> Rail Icon)</strong></div>
+      <div><span class="wwh-tag wwh-how">HOW</span>Click <code>⚖️</code> on the Left Rail (or <code>⚖️ Diff Matrix</code> in the Right Inspector) and choose any two State Cards in the left and right dropdowns to compare their exact Outcome Summaries, Tension Clocks, Locations, Inventories, Secret counts, Blind Spot counts, and Trust/Fear scores in a highlighted side-by-side table.</div>
+      <img src="screenshots/03.png" class="manual-img" alt="3-Way Branch Merger & Meereenese Knot Workbench" onclick="openLightbox(this.src)" onerror="this.style.display='none'">
+    </div>
+  </section>
+
+  <!-- SECTION 5: MANUSCRIPT STUDIO, FAIR-PLAY LEDGER & PRO EXPORTERS -->
+  <section class="bento-card" id="sec-manuscript">
+    <h2>5. SIGHTLINE Manuscript Studio, Fair-Play Ledger &amp; Exporters</h2>
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-pro">PRO</span><strong>Disk-Backed <code>/Manuscript</code> Editor, Zen Mode, Leak Scanner &amp; Retro-Con Sync (<code>✎</code> Icon)</strong></div>
+      <div><span class="wwh-tag wwh-how">HOW</span>
+        &bull; <strong>Auto-Saved Disk Drafts &amp; Formatting Toolbar:</strong> Every scene draft you write automatically saves to <code>&lt;project_folder&gt;/Manuscript/Scene_&lt;node_id&gt;.md</code> on your hard drive. Use the toolbar for Bold, Italic, H1/H2, <code>* * *</code> Scene Breaks, <code>Aa Serif</code> book typography, and <code>⛶ Zen Mode</code> full-screen writing while tracking live word count, reading time, and session progress.<br>
+        &bull; <strong>🔍 Check Sightline Leaks (<code>0 LLM</code>):</strong> Scans your drafted prose against the active POV character's <code>🙈 Blind Spots</code> and warns you in crimson if your draft accidentally mentions an item or secret the character doesn't know!<br>
+        &bull; <strong>🔄 Retro-Con Sync to State (<code>1 GM Call</code>):</strong> Improvised a new detail while writing prose (e.g., a character dropped their key or revealed a secret)? Click <code>🔄 Retro-Con Sync to State</code> to extract those changes from your prose and patch them back into the State Card in 1 click!
+      </div>
+    </div>
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-pro">PRO</span><strong>🎥 Fair-Play Reader Ledger, ◀/▶ Non-Linear Order &amp; 🎬 Pro Exporters</strong></div>
+      <div><span class="wwh-tag wwh-how">HOW</span>
+        &bull; <strong>🎥 Active POV Camera &amp; Fair-Play Reader Ledger:</strong> Select a character in <code>🎥 Active POV Camera</code> to filter the blueprint to their perspective and view the <strong>Agatha Christie / Rian Johnson Fair-Play Ledger</strong>—showing planted artifacts, active dramatic irony (<code>Reader Knows</code> vs. <code>POV Knows</code>), and flagging any unplanted Deus Ex Machina items.<br>
+        &bull; <strong>◀ / ▶ Non-Linear Narrative Order:</strong> Click <code>🔗 Trace Timeline Path</code>, then use the <code>◀</code> and <code>▶</code> arrows on any beat pill in the <code>NARRATIVE BEAT ORDER</code> bar to arrange flashbacks (automatically tagged <code>⏪</code>) while the Linter still validates chronological causality!<br>
+        &bull; <strong>1-Click Exporters:</strong> Export to <code>⬇ .md</code>, <code>⬇ Obsidian</code>, <code>⬇ Word (.doc)</code>, <code>🎬 .fountain</code> (Screenplay), <code>🎮 .ink</code> (Inkle), or <code>🧶 .yarn</code> (Yarn Spinner).
+      </div>
+      <img src="screenshots/04.png" class="manual-img" alt="SIGHTLINE Manuscript Studio, Fair-Play Ledger & Pro Exporters" onclick="openLightbox(this.src)" onerror="this.style.display='none'">
+    </div>
+  </section>
+
+  <!-- SECTION 6: CONTINUITY LINTER V6, SANDERSON MICE & TURTON MICRO-CHRONOLOGY -->
+  <section class="bento-card" id="sec-linter">
+    <h2>6. Continuity Linter v6, Sanderson MICE &amp; Micro-Chronology</h2>
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-what">WHAT</span><strong>Automated Continuity, Chekhov's Gun, MICE Thread &amp; Revision Ripple Auditor (<code>🛡️</code> Icon)</strong></div>
+      <div><span class="wwh-tag wwh-how">HOW</span>Click <code>🛡️ Linter</code> in the Top Bar or Left Rail to audit every causal chain from <code>Turn_0</code> forward:<br>
+        &bull; <strong>🏺 Unfired Chekhov's Guns &amp; 🙈 Unresolved Blind Spots:</strong> Flags tracked items carried $\ge 3$ turns without use, or blind spots unrevealed for $\ge 3$ turns.<br>
+        &bull; <strong>❄️ Sanderson Stalled MICE Threads &amp; Cold Clocks PRO:</strong> Add tags like <code>&lt;Idea: Stolen Ledger&gt;</code> or <code>&lt;Event: Border Crossing&gt;</code> in World Facts. If any MICE thread or Tension Clock goes $\ge 4$ consecutive turns without progress, the Linter flags a Cold Trail alert.<br>
+        &bull; <strong>🌊 Upstream Edit Ripples PRO:</strong> Flags descendant states when an earlier ancestor card was edited with <code>🚩 Flag Descendant Turns</code>.
+      </div>
+    </div>
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-pro">PRO</span><strong>⏱️ Stuart Turton's Micro-Chronology Timetable &amp; Transit Velocity Check</strong></div>
+      <div><span class="wwh-tag wwh-how">HOW</span>Inside the Linter modal, click the <strong><code>⏱️ Micro-Chronology Timetable</code></strong> tab to view a complete <strong>Character &times; Clock-Time Location Grid</strong> (<code>23:40</code>, <code>23:50</code>, <code>00:00</code>) across your timeline. If an active character jumps between opposite zones faster than the turn's elapsed clock time allows, the Linter flags <code>🏃 Impossible Transit Velocity</code>.</div>
+      <div class="img-grid">
+        <img src="screenshots/05.png" class="manual-img" alt="Continuity Linter & MICE Alerts" onclick="openLightbox(this.src)" onerror="this.style.display='none'">
+        <img src="screenshots/20.png" class="manual-img" alt="Turton Micro-Chronology Timetable Grid" onclick="openLightbox(this.src)" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: STORY INSIGHTS, VOICE CADENCE METER & REVERSE-CAUSAL SOLVER -->
+  <section class="bento-card" id="sec-insights">
+    <h2>7. Story Insights, Voice Cadence Meter &amp; Reverse-Causal Solver</h2>
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-pro">PRO</span><strong>💡 Story Insights, Moral Drift &amp; 🗣️ 0-LLM Voice Cadence Meter (<code>💡</code> Icon)</strong></div>
+      <div><span class="wwh-tag wwh-how">HOW</span>Click <code>💡 Insights</code> in the Top Bar or Left Rail to inspect 4 real-time analytics panels:<br>
+        1. <strong>🎬 Director's Instinct Profiler:</strong> Shows your branching bias across <code>Branch A (Canon)</code>, <code>Branch B (High Chaos)</code>, and <code>Branch C (Strategic Twist)</code>.<br>
+        2. <strong>🧭 Character Moral &amp; Tactical Drift ("When the Hero Becomes the Monster"):</strong> Compares each character's Turn 0 Core Motivation against their current motivation, bluffs used, leverage plays, and net trust shifts (<code>0–100 Drift Score</code>). Click <code>🧠 Run AI Deep Thematic Audit (1 GM)</code> for a full psychological breakdown.<br>
+        3. <strong>💎 Unvisited "Hidden Gem" Ghost Branches:</strong> Highlights unvisited Ghost nodes that have higher Dramatic Irony (<code>🔒 + 🙈</code>) or Tension than your chosen branch.<br>
+        4. <strong>🗣️ 0-LLM Voice Cadence &amp; Flanderization Meter:</strong> Computes each character's Avg. Sentence Length, Lexical Diversity (%), Contraction Rate (%), checks dialogue against <code>Hard Never-Rules</code> in <code>Voice_Anchors.md</code>, and warns if two characters' cadences start sounding identical.
+      </div>
+      <div class="img-grid"><img src="screenshots/21.png" class="manual-img" alt="Story Insights, Moral Drift & Voice Cadence Meter" onclick="openLightbox(this.src)" onerror="this.style.display='none'"></div>
+    </div>
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-pro">PRO</span><strong>📌 Floating Idea Nodes &amp; 🎯 Vince Gilligan's Reverse-Causal Bridge Solver (<code>📌</code> Icon)</strong></div>
+      <div><span class="wwh-tag wwh-how">HOW</span>Click <code>📌</code> on the Left Rail to pin untethered future destination beats onto your canvas (<code>📌 Pin Floating Beat to Canvas</code>). When you want to figure out how to get your characters from their current state to that future beat without plot contrivances, click <strong><code>🎯 Solve Causal Bridge (1 GM)</code></strong> to compute 3 physically legal pathways (<code>Path A / B / C</code>) and load Step 1 straight into your Scene Nudge!</div>
+      <div class="img-grid">
+        <img src="screenshots/22.png" class="manual-img" alt="Floating Idea Nodes & Reverse-Causal Bridge Solver" onclick="openLightbox(this.src)" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: WORLD BIBLE, COALA ARCHIVE & HADES SALIENCE QUEUE -->
+  <section class="bento-card" id="sec-lore">
+    <h2>8. World Bible Lorebook, CoALA Archive &amp; Salience Queue</h2>
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-what">WHAT</span><strong>Deterministic Aho-Corasick Lorebook Studio (<code>▤</code> Icon)</strong></div>
+      <div><span class="wwh-tag wwh-how">HOW</span>Click <code>+ Add Lore Entry</code> (or click any lore card to edit). Set the <strong>Title</strong>, comma-separated <strong>Trigger Keys</strong>, integer <strong>Priority</strong>, and check <strong>Constant</strong> if the law applies to every turn. Click <code>💾 Save Lore Entry to World_Bible.md (0 LLM)</code>.</div>
+      <img src="screenshots/06.png" class="manual-img" alt="World Bible Lorebook Studio" onclick="openLightbox(this.src)" onerror="this.style.display='none'">
+    </div>
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-what">WHAT</span><strong>CoALA Episodic Archive (<code>◈</code>), 🔥 Hades Salience Impulse &amp; State Directory (<code>🗂️</code>)</strong></div>
+      <div><span class="wwh-tag wwh-how">HOW</span>SIGHTLINE compacts older Private Knowledge into <code>[Closed Paths/Constraints]</code> in <code>Episodic_Archive.json</code> and scores every memory and trust/clock delta using <strong>Supergiant's (<em>Hades</em>) Reactive Salience Priority Queue</strong>—injecting the #1 highest-scoring unaddressed event as <code>🔥 TOP SALIENCE IMPULSE</code> into the character's prompt. Use <code>🗂️ All States (N) ▾</code> in the Top Bar to jump to any State Column.</div>
+      <div class="img-grid">
+        <img src="screenshots/07.png" class="manual-img" alt="CoALA Episodic Memory Archive" onclick="openLightbox(this.src)" onerror="this.style.display='none'">
+        <img src="screenshots/11.png" class="manual-img" alt="Jump to Any State Column" onclick="openLightbox(this.src)" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9: CAST FILTER, RENAME, SPAWNER & 2-MODE CHARACTER DELETION -->
+  <section class="bento-card" id="sec-cast">
+    <h2>9. Cast Filter, Character Rename, Spawner &amp; 2-Mode Delete</h2>
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-what">WHAT</span><strong>Multi-Character Swimlane Filter, Rename, Spawner &amp; 2-Mode Deletion (<code>Cast ▾</code> Button)</strong></div>
+      <div><span class="wwh-tag wwh-how">HOW</span>
+        &bull; <strong>Filter Swimlanes:</strong> Click any character card to isolate their arc, or hold <code>Ctrl + Click</code> (or click <code>✓</code> / <code>+</code>) to highlight multiple characters' swimlanes simultaneously.<br>
+        &bull; <strong>Rename or Edit Voice (<code>✎ Voice / Delete</code>):</strong> Click <code>✎ Voice / Delete</code> on any character card to rename them across the entire project or update their immutable Voice Anchor.<br>
+        &bull; <strong>🗑️ 2-Mode Character Deletion PRO:</strong> Inside the <code>✎ Voice / Delete</code> drawer, click <code>🗑️ Delete Character...</code> to choose between two safe options (with an automatic rolling backup created first):<br>
+        &nbsp;&nbsp;1. <strong>🚪 Option A (Remove from Current State Forward):</strong> Removes the character from the active state forward (for character death or departure) while keeping all earlier turns intact.<br>
+        &nbsp;&nbsp;2. <strong>🔥 Option B (Purge Dummy Character from Entire Project):</strong> Atomically removes a test/dummy character across <code>Turn_0_Initial.md</code>, all <code>Run_XXX</code> files, <code>Voice_Anchors.md</code>, and relationship edges in <code>0.0s</code>.<br>
+        &bull; <strong>Spawn New Character (<code>+ Spawn Character</code>):</strong> Introduce new characters mid-book into the active state and <code>Voice_Anchors.md</code> with <code>0 LLM Calls</code>.
+      </div>
+      <div class="img-grid">
+        <img src="screenshots/08.png" class="manual-img" alt="Cast Filter, Voice Cadence & Edit Drawer" onclick="openLightbox(this.src)" onerror="this.style.display='none'">
+        <img src="screenshots/09.png" class="manual-img" alt="Spawn New Character & 2-Mode Delete" onclick="openLightbox(this.src)" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 10: RIGHT INSPECTOR TABS 1-3 -->
+  <section class="bento-card full-width" id="sec-inspector">
+    <h2>10. Right Sightline Inspector — Tabs 1–3: Cascade Edits, Lie-Detector, Table-Read &amp; Red-Team</h2>
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-what">TAB 1</span><strong><code>State &amp; Diffs</code> — 2nd-Order ToM Badges, Phantom Items &amp; 🌊 Downstream Revision Ripple</strong></div>
+      <div><span class="wwh-tag wwh-how">HOW</span>Inspect Location, Inventory, Emotion, Private Knowledge (badged with <code>🧠 2nd-Order ToM</code> when a character holds beliefs about another character's mind), Relationships, Core Motivation, and the Immutable Voice Anchor. Click <strong><code>✎ Edit</code></strong> on any card to open the God-Mode inline editor and select your <strong>Downstream Revision Ripple Mode</strong>: <code>📍 Edit This State Card Only</code>, <code>🌊 Propagate Edit Downstream</code> (updates child turns automatically), or <code>🚩 Flag Descendant Turns in Linter</code>.</div>
+    </div>
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-pro">TAB 2</span><strong><code>Turn Action</code> — 🛡️ EAST Guard, 🤥 Subtext Lie-Detector, 🎧 Offline Table-Read &amp; 🎙️ Interrogation / Split-Mind</strong></div>
+      <div><span class="wwh-tag wwh-how">HOW</span>
+        &bull; <strong>🛡️ EAST Guard &amp; 🤥 Subtext Lie-Detector:</strong> Badges every turn action with <code>🛡️ EAST Guard: CLEAN / INTERCEPTED</code> and classifies spoken dialogue into <code>🤥 Active Bluff</code>, <code>🛡️ Deflection</code>, <code>🗡️ Leverage Play</code>, <code>🔇 Silent</code>, or <code>✓ Candid</code>—plus whether listeners in earshot <code>🙈 Bought the Lie</code> or <code>👁️ Clocked the Tell</code>.<br>
+        &bull; <strong>🎧 Writers' Room Audio Table-Read:</strong> Click <code>🎧 Full Scene</code> (reads Scene Nudge + each active character's Action &amp; Dialogue + Scene Outcome) or <code>💬 Dialogue Only</code>. While a character speaks, their live caption appears and their monogram pulses on the 2D Stage Map! Click <code>⏹ Stop</code> to halt audio instantly.<br>
+        &bull; <strong>🎙️ Interrogate Agent &amp; 🧠 Split-Mind Debate:</strong> Type a question or dilemma and click <code>🎙️ Interrogate Agent</code> to interview the character locked strictly inside their current epistemic state, or click <code>🧠 Split-Mind Debate</code> to trigger a 3-voice <em>Disco Elysium</em> internal argument between their <strong>Core Motivation</strong>, <strong>Paranoia &amp; Fear</strong>, and <strong>Voice Reflex</strong>!
+      </div>
+    </div>
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-pro">TAB 3</span><strong><code>World &amp; Audit</code> — 🕵️ Red-Team This Scene, 🌩️ Weather Forecast Oracle, Clocks &amp; CoT Trace</strong></div>
+      <div><span class="wwh-tag wwh-how">HOW</span>
+        &bull; <strong>🕵️ Red-Team This Scene (<code>1 GM Call</code>):</strong> Challenges the current scene from the perspective of a skeptical beta-reader to find the top 3 <em>"Why didn't Character X just...?"</em> plot holes—each with a 1-click <code>+ Patch World Bible (0 LLM)</code> button to seal the shortcut!<br>
+        &bull; <strong>🌩️ Weather Forecast Oracle (<code>0 LLM</code> or <code>🎲+AI</code>):</strong> Computes non-destructive Clock Detonation probabilities, active Convergence Zones, volatile Trust/Fear pairs, and optional 3-roll Monte Carlo lookahead trajectories.
+      </div>
+      <div class="img-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
+        <img src="screenshots/12.png" class="manual-img" alt="Inspector Tab 1: State & Diffs with Cascade Edit" onclick="openLightbox(this.src)" onerror="this.style.display='none'">
+        <img src="screenshots/13.png" class="manual-img" alt="Inspector Tab 1: Voice Anchor & 2nd-Order ToM" onclick="openLightbox(this.src)" onerror="this.style.display='none'">
+        <img src="screenshots/14.png" class="manual-img" alt="Inspector Tab 2: Subtext Lie-Detector, Table-Read & Split-Mind" onclick="openLightbox(this.src)" onerror="this.style.display='none'">
+        <img src="screenshots/15.png" class="manual-img" alt="Inspector Tab 3: Red-Team Scene, Oracle & World Audit" onclick="openLightbox(this.src)" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 11: TAB 4 DUAL 2D STAGE MAP & TRUST MATRIX -->
+  <section class="bento-card dark-card full-width" id="sec-stage">
+    <h2 style="color:var(--lime);">11. Right Sightline Inspector — Tab 4: <code>Stage &amp; Sightline</code> (Dual Visual/Acoustic Map)</h2>
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-pro">PRO</span><strong>Dual <code>👁️ Visual</code> &amp; <code>👂 Acoustic</code> 2D Stage-Blocking Map, Custom Zone Pinning &amp; Social Dominoes</strong></div>
+      <div><span class="wwh-tag wwh-how">HOW</span>
+        &bull; <strong>Dual Sensory Channels:</strong> Toggle between <code>👁️+👂 Both</code>, <code>👁️ Visual</code>, and <code>👂 Earshot</code> at the top of the 2D Stage Map:
+        <span style="color:#10B981;font-weight:800;">━ Clear Sight (Green)</span> for unobstructed same-room line of sight,
+        <span style="color:#38BDF8;font-weight:800;">┅ Clear Earshot (Blue Dashed)</span> for audio range,
+        <span style="color:#F59E0B;font-weight:800;">┅ Partial Peek / Overhear (Amber Dashed)</span> across an ajar door, partition, or air vent, and
+        <span style="color:#F43F5E;font-weight:800;">✕ Blocked (Red)</span> for separated zones. Characters who took silent actions without speaking display a <code>🔇</code> badge.<br>
+        &bull; <strong>📌 Pin Zone:</strong> Click <code>📌 Pin Zone</code> to manually assign or lock a character's room name in <code>stage_layout.json</code>.<br>
+        &bull; <strong>🌊 2nd-Order Cascading Social Dominoes:</strong> When Character C witnesses Character A betraying or attacking Character C's ally B, SIGHTLINE automatically computes and displays the 2nd-order social ripple card right below the Directed Trust &amp; Fear Matrix SVG.
+      </div>
+      <div class="img-grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
+        <img src="screenshots/16.png" class="manual-img" alt="Dual Visual/Acoustic 2D Stage Map & Directed Trust Matrix" onclick="openLightbox(this.src)" onerror="this.style.display='none'">
+        <img src="screenshots/17.png" class="manual-img" alt="Cascading Social Dominoes, Blind Spots & Secrets" onclick="openLightbox(this.src)" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 12: COST GUIDE, API STATS & ZERO-LEAK SECURITY -->
+  <section class="bento-card full-width" id="sec-cost">
+    <h2>12. AI Model Selection, Live API Stats &amp; Zero-Leak Security Architecture</h2>
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-what">WHY</span><strong>Asymmetric Model Routing (<code>Char Model</code> vs. <code>GM Model</code>) — Saves 65–80% on API Costs</strong></div>
+      <div>
+        &bull; <strong>Character Agent Model (<code>Char Model</code>):</strong> Runs once per active character on stage (~150 tokens output). Use fast, low-cost models (<code>gpt-4o-mini</code>, <code>claude-3-5-haiku</code>, <code>gemini-2.5-flash</code>, <code>qwen/qwen3.8-27b</code>, or local <code>llama3.1:8b</code>).<br>
+        &bull; <strong>Continuity Auditor &amp; Showrunner Model (<code>GM Model</code>):</strong> Runs once per turn to adjudicate sightline collisions, write <code>Branch A / B / C</code>, and power opt-in Showrunner tools (<code>Red-Team</code>, <code>Reverse-Causal Solver</code>, <code>Retro-Con</code>). Use your strongest reasoning model here (<code>openai/gpt-oss-120b</code>, <code>gpt-4o</code>, <code>claude-3-7-sonnet</code>, <code>gemini-2.5-pro</code>).
+      </div>
+    </div>
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-how">SETUP GUIDE</span><strong>🔌 Step-by-Step: Cloud BYOK (Bring Your Own Key) vs. $0 Local AI (Ollama / LM Studio)</strong></div>
+      <div>
+        <strong>1. What is BYOK (Bring Your Own Key)?</strong><br>
+        Instead of paying a $30/month cloud subscription markup, SIGHTLINE&trade; connects directly from your computer to your chosen AI provider at wholesale cost (often fractions of a cent per turn—or <strong>$0.00 on Free API Tiers</strong>).<br>
+        &bull; <strong>How to Set Up Cloud BYOK in 60 Seconds:</strong><br>
+        &nbsp;&nbsp;1. Open the <strong>Left Sightline Console (<code>▶</code>)</strong> and click <strong><code>🎛️ AI Provider &amp; Asymmetric Models</code></strong>.<br>
+        &nbsp;&nbsp;2. Pick your <strong>Provider</strong> from the dropdown:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&ndash; <strong><code>OpenAI Compatible</code> (Groq / OpenRouter / DeepSeek):</strong> For <strong>Groq</strong> (fast &amp; free tier available at <code>console.groq.com/keys</code>), keep Base URL as <code>https://api.groq.com/openai/v1</code>, set Char Model to <code>qwen/qwen3.8-27b</code> (or <code>llama-3.3-70b-versatile</code>) and GM Model to <code>openai/gpt-oss-120b</code>. For <strong>OpenRouter</strong> (<code>openrouter.ai/keys</code>), set Base URL to <code>https://openrouter.ai/api/v1</code>.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&ndash; <strong><code>Gemini</code> (Google AI Studio — Free Tier Available):</strong> Get a key at <code>aistudio.google.com/apikey</code>. Base URL auto-fills to Google's endpoint; set Char Model to <code>gemini-2.5-flash</code> and GM Model to <code>gemini-2.5-pro</code>.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&ndash; <strong><code>OpenAI</code>:</strong> Get a key at <code>platform.openai.com/api-keys</code>. Set Char Model to <code>gpt-4o-mini</code> and GM Model to <code>gpt-4o</code>.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&ndash; <strong><code>Anthropic</code>:</strong> Get a key at <code>console.anthropic.com</code>. Set Char Model to <code>claude-3-5-haiku-latest</code> and GM Model to <code>claude-3-7-sonnet-latest</code>.<br>
+        &nbsp;&nbsp;3. Paste your API key into the <strong>LLM API Key</strong> box, click <strong><code>💾 Save AI Config (0 LLM)</code></strong>, and click <strong><code>🔌 Test AI Connection</code></strong> to verify!<br><br>
+        <strong>2. How to Run 100% Free &amp; Offline on Your Own Computer (<code>Local</code> Mode):</strong><br>
+        If your PC or Mac has 8GB+ of RAM/VRAM, you can run AI models locally at <strong>$0.00 cost forever</strong> with zero internet connection:<br>
+        &bull; <strong>Option A — Using Ollama (Recommended):</strong><br>
+        &nbsp;&nbsp;1. Download and install <strong>Ollama</strong> from <code>ollama.com</code>.<br>
+        &nbsp;&nbsp;2. Open your terminal/command prompt and run: <code>ollama run llama3.1:8b</code> (or <code>ollama run qwen2.5:14b</code>).<br>
+        &nbsp;&nbsp;3. In SIGHTLINE&trade;, open <code>🎛️ AI Provider &amp; Asymmetric Models</code>, select <strong><code>Local</code></strong>, keep Base URL as <code>http://127.0.0.1:11434/v1</code>, type <code>llama3.1:8b</code> in both the Char Model and GM Model boxes (leave API Key blank), click <strong><code>💾 Save AI Config</code></strong>, and click <strong><code>🔌 Test AI Connection</code></strong>!<br>
+        &bull; <strong>Option B — Using LM Studio:</strong><br>
+        &nbsp;&nbsp;1. Download <strong>LM Studio</strong> from <code>lmstudio.ai</code>, download any model, and start the Local Server on port <code>1234</code>.<br>
+        &nbsp;&nbsp;2. In SIGHTLINE&trade;, select <strong><code>Local</code></strong>, set Base URL to <code>http://127.0.0.1:1234/v1</code>, enter your loaded model's name, and click <strong><code>💾 Save AI Config</code></strong>.
+      </div>
+    </div>
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-how">STATS</span><strong>Live <code>📊 API Stats</code> Dashboard &amp; 🔒 Zero-Leak API Key Isolation</strong></div>
+      <div>
+        &bull; <strong><code>📊 API Stats</code> Button (Top Bar):</strong> Inspect exact Input, Output, and Thinking token counts, per-agent latency, <strong>💤 Green Room token savings</strong>, and <strong>🛠️ 0-LLM Fast-Path edits</strong>.<br>
+        &bull; <strong>🔒 Zero-Leak API Key Privacy:</strong> SIGHTLINE stores your secret API key exclusively in your local OS user profile (<code>~/.sightline_secret_key.json</code>)—never inside your book project folder, <code>Story_Flowchart.html</code>, or <code>📦 Export .zip</code> archives. You can share project folders and Time-Capsule HTML files with editors with <strong>0% risk</strong> of exposing your API key.
+      </div>
+      <div class="img-grid" style="max-width:520px;">
+        <img src="screenshots/10.png" class="manual-img" alt="Live API & Token Telemetry Modal" onclick="openLightbox(this.src)" onerror="this.style.display='none'">
+      </div>
+    </div>
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-what">LICENSE</span><strong>🔑 License Activation, 14-Day Offline Writing Lease &amp; 1-Click PC Seat Transfer</strong></div>
+      <div>
+        &bull; <strong>Buy Once, Own Forever (Zero Subscriptions):</strong> Your SIGHTLINE&trade; license unlocks the native desktop studio permanently on your activated machine(s).<br>
+        &bull; <strong>✈️ 14-Day Offline Writing Lease:</strong> Once activated, SIGHTLINE&trade; binds a cryptographic hardware token to your computer—allowing you to work <strong>100% offline</strong> on flights, trains, or writing retreats for up to 14 days at a time without needing an internet connection. Simply open SIGHTLINE&trade; while connected to Wi-Fi once every two weeks to automatically refresh your offline lease.<br>
+        &bull; <strong>🔄 How to Transfer Your License to Another PC or Mac (1-Click Deactivation):</strong><br>
+        &nbsp;&nbsp;1. Open the <strong>Left Sightline Console (<code>▶</code>)</strong> on your current computer and scroll to the bottom footer.<br>
+        &nbsp;&nbsp;2. Click the <strong><code>🔑 [Your Name] &bull; SIGHTLINE&trade; &copy; 2026 Nikhil Bhardwaj</code></strong> license badge at the bottom of the drawer (requires an active internet connection so Lemon Squeezy can release your seat).<br>
+        &nbsp;&nbsp;3. Click <strong>OK</strong> on the confirmation prompt (<em>"Deactivate SIGHTLINE license on this computer so you can move it to another device?"</em>). Your current PC will immediately deactivate and free up your seat.<br>
+        &nbsp;&nbsp;4. Launch SIGHTLINE&trade; on your new computer and enter your License Key to unlock it.<br>
+        &bull; <strong>👥 Teams (5-Seat) &amp; Enterprise (20+ Seat) Licenses:</strong> On multi-seat licenses, deactivating one computer only releases that single machine's seat slot without affecting your other teammates' active installations.
+      </div>
+    </div>
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-when">FAQ</span><strong>❓ Frequently Asked Workflow Questions</strong></div>
+      <div>
+        &bull; <strong>Q: Why did a dashed Ghost Card (<code>Branch B</code> or <code>C</code>) turn into a solid card?</strong><br>
+        <em>A: Whenever you time-travel to (<code>📌 Branch Selected</code>), edit (<code>✎ Edit</code>), or merge a Ghost branch, SIGHTLINE&trade; permanently promotes it into a Canon State Card so you never lose a branch you worked on—even when Ghost branches are hidden.</em><br>
+        &bull; <strong>Q: Does Turn 50 cost more tokens than Turn 1?</strong><br>
+        <em>A: No! Unlike standard AI chat tools that re-send your entire 50-turn history on every click, SIGHTLINE&trade; only sends the single current state snapshot (~700 tokens) plus triggered lore. Turn 100 costs the exact same tiny input tokens as Turn 1.</em><br>
+        &bull; <strong>Q: Can I use SIGHTLINE&trade; 100% free with zero API costs?</strong><br>
+        <em>A: Yes. Switch the AI Provider dropdown to <code>Local</code> to run local models via <strong>Ollama</strong> or <strong>LM Studio</strong> at $0.00 cost, or use free-tier API keys from Groq, Google Gemini AI Studio, or OpenRouter.</em><br>
+        &bull; <strong>Q: Where are my story files and API keys saved?</strong><br>
+        <em>A: All state cards, World Bible lore, Voice Anchors, and manuscript drafts are saved as clean Markdown and JSON directly inside your chosen project folder on your hard drive. Your secret API key is isolated in your local OS user profile (<code>~/.sightline_secret_key.json</code>) so exporting a project <code>.zip</code> never leaks your API key.</em>
+      </div>
+    </div>
+  </section>
+  <!-- SECTION 13: ENRICHED FAQ & TROUBLESHOOTING GUIDE (PRO PRO) -->
+  <section class="bento-card full-width" id="sec-faq">
+    <h2>13. Frequently Asked Questions &amp; Showrunner Troubleshooting Guide</h2>
+
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-what">CANVAS &amp; TIMELINES</span><strong>Multiverse Branching, Ghost Cards &amp; Navigation</strong></div>
+      <div>
+        &bull; <strong>Q: Why did a dashed Ghost Card (<code>Branch B</code> or <code>Branch C</code>) turn into a solid card?</strong><br>
+        <em>A: Every turn generates 3 outcomes: <code>Branch A</code> (Canon) and two dashed Ghost Cards (<code>Branch B: High Chaos</code> and <code>Branch C: Strategic Twist</code>). The moment you time-travel to a Ghost Card (<code>📌 Branch Selected</code>), edit it (<code>✎ Edit</code>), or merge it (<code>⑂</code>), SIGHTLINE&trade; permanently promotes it into a solid Canon State Card so you never lose a timeline you worked on—even when you click <code>◌</code> to hide untouched Ghost branches.</em><br><br>
+        &bull; <strong>Q: What is the difference between <code>📌 Branch Selected</code> and <code>📍 Continue Active</code> in the Left Console?</strong><br>
+        <em>A: <code>📍 Continue Active</code> always advances the story from your Acid-Lime <code>YOU ARE HERE</code> card. <code>📌 Branch Selected</code> lets you click any historical card or Ghost node on the canvas and spawn a brand-new timeline branch from that exact point in time.</em><br><br>
+        &bull; <strong>Q: How do I isolate just 1 or 2 characters' swimlane threads on a busy canvas?</strong><br>
+        <em>A: Click <code>Cast (N) ▾</code> in the Top Bar. Click a character card to solo their swimlane, or hold <code>Ctrl + Click</code> (or click the <code>+ / ✓</code> badge) to highlight multiple characters' colored cubic-Bézier threads simultaneously.</em><br><br>
+        &bull; <strong>Q: How do I track a custom MacGuffin or prop that isn't in the default icon list?</strong><br>
+        <em>A: Type any comma-separated item names into the Top Bar search box (<code>🔍 + Track Item: Key, Ledger...</code>). SIGHTLINE&trade; immediately scans all character inventories across every turn and badges those items with live pills.</em>
+      </div>
+    </div>
+
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-when">SIGHTLINES &amp; PHYSICS</span><strong>Information Asymmetry, Blind Spots, Green Room &amp; 2D Stage Blocking</strong></div>
+      <div>
+        &bull; <strong>Q: How do I make sure a character DOES NOT know a secret so SIGHTLINE&trade; tracks it as a Blind Spot (<code>🙈</code>)?</strong><br>
+        <em>A: In a character's <code>Private Knowledge</code> field (or via God-Mode <code>✎ Edit</code>), phrase unknown facts or false beliefs using explicit epistemic cues such as <code>"unaware that..."</code>, <code>"does not know..."</code>, <code>"falsely believes..."</code>, or <code>"assumes that..."</code>. SIGHTLINE&trade; automatically routes those clauses into <code>🙈 Blind Spots</code>, shields them via the <code>🛡️ Pre-GM EAST Guard</code>, and enforces them in the Manuscript Studio.</em><br><br>
+        &bull; <strong>Q: How do I hide a secret trap or twist from ALL characters so only the Continuity Auditor (GM) knows about it?</strong><br>
+        <em>A: In <code>=== GLOBAL WORLD FACTS ===</code>, prefix the line with <code>* [HIDDEN GM_ONLY]: ...</code> (for example: <code>* [HIDDEN GM_ONLY]: Victor wired an explosive charge under the floorbolt</code>). SIGHTLINE&trade; physically strips <code>[HIDDEN GM_ONLY]</code> lines from all Character Agent prompts while keeping them visible to the GM Auditor!</em><br><br>
+        &bull; <strong>Q: What happens when I uncheck a character into the Dormant Green Room (<code>💤</code>)?</strong><br>
+        <em>A: Unchecked characters stay off-screen in the Green Room, consuming <strong><code>0 LLM calls</code> and <code>0 tokens</code></strong>. Their state blocks are sliced out of active character prompts so active characters cannot meta-game. However, the GM receives a 1-line digest of their location and traps—so if an active scene makes loud noise near a dormant character's room, the GM automatically emits a <code>+💤Δ</code> ripple update for them.</em><br><br>
+        &bull; <strong>Q: What do the 4 colored raycast lines on the 2D Stage Map (Tab 4) mean?</strong><br>
+        <em>A: <span style="color:#10B981;font-weight:800;">━ Solid Green (Clear Sight)</span> = Same zone with unobstructed visual line-of-sight. <span style="color:#38BDF8;font-weight:800;">┅ Dashed Blue (Clear Earshot)</span> = Full audio earshot. <span style="color:#F59E0B;font-weight:800;">┅ Dashed Amber (Partial Peek / Overhear)</span> = Peering or overhearing across an ajar door, partition, or air vent. <span style="color:#F43F5E;font-weight:800;">✕ Red Marker (Blocked)</span> = Physically separated zones with zero sensory access.</em>
+      </div>
+    </div>
+
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-pro">PRO STUDIO TOOLS</span><strong>Rashomon Lens, Manuscript Studio, Retro-Con, Reverse-Causal Solver &amp; Audio Table-Read</strong></div>
+      <div>
+        &bull; <strong>Q: What does the <code>👁️ Lens: Omniscient ▾</code> (Rashomon Filter) dropdown in the Top Bar do?</strong><br>
+        <em>A: Selecting any character enters their subjective epistemic reality in <code>0.0s</code> (<code>0 LLM Calls</code>): turns where they were <code>💤 Dormant</code> dim on the canvas, characters in <code>✕ Blocked</code> rooms become <code>? UNKNOWN</code> on the 2D Stage Map, other characters' secrets are redacted, and stolen items they still think they hold appear as <strong>Violet Phantom Pills (<code>👻</code>)</strong>.</em><br><br>
+        &bull; <strong>Q: What if I improvise a new detail while writing prose in the Manuscript Studio (e.g., a character drops an item or reveals a secret)?</strong><br>
+        <em>A: Click <strong><code>🔄 Retro-Con Sync to State (1 GM)</code></strong> in the Manuscript Studio toolbar. SIGHTLINE&trade; compares your drafted prose against the State Card, extracts any new state changes you improvised, and lets you patch them back into the State Card in 1 click!</em><br><br>
+        &bull; <strong>Q: How do I create a <code>📌 Floating Beat</code> and use <code>🎯 Vince Gilligan's Reverse-Causal Solver</code>?</strong><br>
+        <em>A: Click the <code>📌</code> icon on the Left Rail (below the <code>🔥</code> flame icon). Enter your future destination scene's Title, Target Locations, and Target Inventory, then click <code>📌 Pin Floating Beat to Canvas (0 LLM)</code>. Whenever you want to bridge your characters from their current state to that future scene, click <code>🎯 Solve Causal Bridge (1 GM)</code> to generate 3 physically legal pathways (<code>Path A / B / C</code>).</em><br><br>
+        &bull; <strong>Q: What does <code>🎧 Table-Read Scene</code> read out loud, and does it cost any API tokens?</strong><br>
+        <em>A: It uses 100% free, offline system speech synthesis (<code>$0.00</code> token cost). <code>🎧 Full Scene</code> reads the Scene Nudge, each active character's Intended Action and Spoken Dialogue (while pulsing their monogram on the 2D Stage Map), and the Scene Outcome. <code>💬 Dialogue Only</code> reads strictly the spoken dialogue lines. Click <code>⏹ Stop</code> to halt audio instantly.</em><br><br>
+        &bull; <strong>Q: When I use God-Mode <code>✎ Edit</code> on an earlier turn, what do the Ripple options do?</strong><br>
+        <em>A: <code>📍 Edit This State Card Only</code> updates only that single card. <code>🌊 Propagate Edit Downstream</code> automatically updates that field across all child turns descending from that card. <code>🚩 Flag Descendant Turns in Linter</code> marks child turns in the Continuity Linter so you can review them manually.</em><br><br>
+        &bull; <strong>Q: What is the difference between Option A and Option B when deleting a character in <code>Cast ▾</code>?</strong><br>
+        <em>A: <strong>Option A (Remove from Current State Forward)</strong> removes the character from the active state forward (ideal when a character dies or leaves the story mid-book while preserving their history in earlier turns). <strong>Option B (Purge Dummy Character from Entire Project)</strong> atomically removes a test/placeholder character across <code>Turn_0</code>, all <code>Run_XXX</code> files, and <code>Voice_Anchors.md</code>. Both modes create an automatic backup in <code>/backups</code> first.</em>
+      </div>
+    </div>
+
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-how">COST, PRIVACY &amp; LICENSE</span><strong>Token Savings, Free Local AI (Ollama / LM Studio), Zero-Leak Privacy &amp; Seat Transfer</strong></div>
+      <div>
+        &bull; <strong>Q: Does Turn 50 or Turn 100 cost more API tokens than Turn 1?</strong><br>
+        <em>A: <strong>No!</strong> Standard AI chat tools re-send your entire 50-turn history on every message (ballooning to 50,000+ tokens per click). SIGHTLINE&trade; is a Markov State Machine that only sends the single current state snapshot (~700 tokens) plus triggered lore capped by your Lore Token Budget (default 600 tokens). Turn 100 costs the exact same tiny input tokens as Turn 1!</em><br><br>
+        &bull; <strong>Q: Can I run SIGHTLINE&trade; 100% free with zero API costs?</strong><br>
+        <em>A: Yes! Open <code>🎛️ AI Provider &amp; Asymmetric Models</code> in the Left Console and set Provider to <strong><code>Local</code></strong> to run local models on your own PC/Mac via <strong>Ollama</strong> (<code>http://127.0.0.1:11434/v1</code>) or <strong>LM Studio</strong> (<code>http://127.0.0.1:1234/v1</code>) at <code>$0.00</code> cost, or use free-tier API keys from Groq, Google AI Studio, or OpenRouter.</em><br><br>
+        &bull; <strong>Q: Where are my manuscript files and API keys stored? Is it safe to share a <code>📦 Export .zip</code> file?</strong><br>
+        <em>A: 100% of your story files (<code>.md</code> and <code>.json</code>) stay on your local hard drive inside your project folder. Your secret API key is isolated in your OS user profile (<code>~/.sightline_secret_key.json</code>) and is <strong>never</strong> written into your project folder, <code>Story_Flowchart.html</code>, or <code>.zip</code> exports—making project <code>.zip</code> files and HTML Time-Capsules 100% safe to share with editors or collaborators.</em><br><br>
+        &bull; <strong>Q: How do I transfer my SIGHTLINE&trade; license to a new computer?</strong><br>
+        <em>A: Open the Left Console (<code>▶</code>), scroll to the bottom footer, and click <code>🔑 [Your Name] &bull; SIGHTLINE&trade;</code>. Click <code>🔓 Deactivate This PC</code> in the popup modal to release your seat, then enter your License Key on your new computer.</em>
+      </div>
+    </div>
+
+    <div class="sub-card">
+      <div><span class="wwh-tag wwh-how">STUDIO UTILITIES</span><strong>🌙 Night Mode, 🔌 Test AI, ⏪ 1-Click Undo / Restore, 📂 Open Folder &amp; ⌨️ Shortcuts</strong></div>
+      <div>
+        &bull; <strong>🌙 Night Mode / ☀️ Daylight Toggle:</strong> Click <code>🌙 Night</code> at the bottom of the Left Console to switch the canvas and cards into a dark-slate night-writing theme.<br>
+        &bull; <strong>🔌 Test AI Connection:</strong> Inside <code>🎛️ AI Provider &amp; Asymmetric Models</code>, click <code>🔌 Test AI Connection</code> to verify your API key and model name with a 0.4s ping before running a turn.<br>
+        &bull; <strong>⏪ Undo Last Turn &amp; 🕰️ Restore Backup:</strong> Inside <code>📂 Project Switcher</code>, click <code>⏪ Undo Last Turn</code> to roll back the latest <code>Run_XXX</code> state, or click <code>🕰️ Restore Backup</code> to restore the most recent snapshot from <code>/backups</code>.<br>
+        &bull; <strong>📂 Open Current Folder in Explorer:</strong> Click <code>📂 Open Current Folder in Explorer</code> inside Project Switcher to open your active book folder in Windows File Explorer or macOS Finder.<br>
+        &bull; <strong>⌨️ Keyboard Shortcuts:</strong> Press <code>Esc</code> to close any open modal window, <code>Ctrl + Enter</code> inside the Scene Nudge box to run a turn, or <code>Ctrl + S</code> inside the Manuscript Studio to save to disk.<br>
+        &bull; <strong>🔔 Studio Hub, Updates &amp; 💬 Feedback:</strong> Click <code>🔔 Hub</code> to check for updates and review your <strong>100% Author IP Ownership EULA</strong>, or click <code>💬 Feedback</code> to send a Bug Report or Feature Request.
+      </div>
+    </div>
+  </section>
+</div>
+
+<div id="lightbox" onclick="this.style.display='none'"><img id="lightbox-img" src="" alt="Enlarged Screenshot"></div>
+<footer class="footer-bar">SIGHTLINE&trade; &bull; Copyright &copy; 2026 Nikhil Bhardwaj. All Rights Reserved.</footer>
+<script>
+function openLightbox(src){const lb=document.getElementById('lightbox'),img=document.getElementById('lightbox-img');img.src=src;lb.style.display='flex';}
+</script>
+</body>
+</html>
