@@ -934,6 +934,19 @@ details.faq-item summary::-webkit-details-marker { display: none; }
       <strong>SIGHTLINE™ PRO</strong> is the world’s first Multi-Agent Narrative State Machine, Dual-Channel Sightline Auditor, and Multiverse Continuity Studio. Built with the sensor-isolation rigor of <strong>Mercedes-Benz Hardware-in-the-Loop (HiL) simulation</strong>, it treats every character as an isolated mind bound strictly by what their eyes and ears can detect.
     </p>
 
+    <!-- YOUTUBE LAUNCH TRAILER EMBED -->
+    <div style="max-width: 920px; margin: 0 auto 32px auto; border-radius: 24px; overflow: hidden; border: 2px solid var(--border-soft); box-shadow: var(--shadow-lg); background: #0D0E10;">
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe 
+          src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID?rel=0" 
+          title="SIGHTLINE PRO Official Launch Trailer"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
     <!-- YOUR 3 ACTION BUTTONS + CLICKABLE JATAK PROMO BANNER -->
     <div class="hero-cta-stack">
       <div class="hero-btn-row">
@@ -960,7 +973,6 @@ details.faq-item summary::-webkit-details-marker { display: none; }
       <button class="showcase-tab active" onclick="switchHeroTab('tab-rashomon', this)">👁️ Rashomon Reality Lens + 🔥 Pacing Heatmap</button>
       <button class="showcase-tab" onclick="switchHeroTab('tab-redteam', this)">🕵️ Red-Team Plot-Hole Catcher + 2D Stage Map</button>
       <button class="showcase-tab" onclick="switchHeroTab('tab-liveboard', this)">🕹️ Interactive Sherlock Holmes Storyboard (Live Embed)</button>
-      <button class="showcase-tab" onclick="switchHeroTab('tab-video', this)">🎬 Watch 90s Flagship Launch Film</button>
     </div>
 
     <div class="showcase-stage">
@@ -997,13 +1009,6 @@ details.faq-item summary::-webkit-details-marker { display: none; }
           <a href="Sherlock_Holmes_Flowchart.html" target="_blank" class="btn-lime" style="padding:5px 14px;font-size:11.5px;">⛶ Open Fullscreen in New Tab ↗</a>
         </div>
         <iframe src="Sherlock_Holmes_Flowchart.html" style="width:100%;height:640px;border:none;background:#F5F6F3;"></iframe>
-      </div>
-
-      <!-- PANE 4: 90S LAUNCH TRAILER VIDEO -->
-      <div class="showcase-pane" id="tab-video">
-        <video controls poster="Hero.png" style="width:100%;max-height:640px;display:block;background:#000;">
-          <source src="Sightline_Launch_Trailer.mp4" type="video/mp4">
-        </video>
       </div>
     </div>
   </section>
@@ -1118,6 +1123,9 @@ details.faq-item summary::-webkit-details-marker { display: none; }
               <div style="font-size:12px;color:#D1D5DB;">Use code <code>JATAK</code> for 40% OFF SIGHTLINE&trade; PRO and get VIP Day-1 backer perks when the <em>JATAK</em> Trilogy launches.</div>
             </div>
             <button class="btn-lime" style="padding:8px 16px;font-size:12px;" onclick="copyPromoCode()">📋 Copy Code: JATAK</button>
+            <div style="display:flex;gap:8px;align-items:center;">
+              <a href="https://nikhil2bhardwaj.blogspot.com" class="btn-lime" style="padding:8px 18px;font-size:12.5px;">Visit my Personal Blog</a>
+            </div>
           </div>
         </div>
       </div>
@@ -1335,7 +1343,7 @@ details.faq-item summary::-webkit-details-marker { display: none; }
 
       <!-- PRO -->
       <div class="price-card pro">
-        <span class="pro-flag">⭐ Most Popular (88% Choose PRO)</span>
+        <span class="pro-flag">⭐ Most Popular</span>
         <h3>SIGHTLINE™ PRO</h3>
         <p class="price-desc">Studio &amp; Showrunner Edition with all 29 upgrades for trilogy authors and screenwriters.</p>
         <div class="price-row">
@@ -1346,7 +1354,7 @@ details.faq-item summary::-webkit-details-marker { display: none; }
         <a href="https://store.dodopayments.com/nikhil2bhardwaj" class="price-btn pro-btn">🚀 Start 7-Day Free Trial (PRO)</a>
 
         <ul class="price-features">
-          <li><strong>✓ EVERYTHING IN STANDARD, PLUS:</strong></li>
+          <li><strong>EVERYTHING IN STANDARD, PLUS:</strong></li>
           <li>✓ 👁️ The Rashomon Reality Lens &amp; 👻 Phantom Pills</li>
           <li>✓ 👁️+👂 Dual Visual &amp; Acoustic 2D Raycasting</li>
           <li>✓ 🛡️ Pre-GM EAST Guard &amp; 🧠 2nd-Order ToM</li>
@@ -1373,9 +1381,10 @@ details.faq-item summary::-webkit-details-marker { display: none; }
           <h4>SIGHTLINE™ PRO Teams</h4>
           <p>For TV writers' rooms, co-author teams, and indie game studios. Includes 100% of PRO v6.0 features + independent seat transfers.</p>
         </div>
-        <div style="text-align:right;">
+        <div>
           <div style="font-size:13px;text-decoration:line-through;color:var(--text-muted);font-weight:700;">$599 MRP</div>
           <div style="font-size:32px;font-weight:800;color:var(--obsidian);line-height:1;">$349 <span style="font-size:12px;font-weight:700;color:var(--text-muted);">One-Time</span></div>
+          <span class="price-jatak" onclick="copyPromoCode()">📋 Code JATAK: 40% OFF Early Bird</span>
           <a href="https://store.dodopayments.com/nikhil2bhardwaj" class="btn-obsidian" style="margin-top:10px;padding:8px 18px;font-size:12.5px;">⚡ Buy PRO Teams (5 Seats)</a>
         </div>
       </div>
@@ -1386,9 +1395,10 @@ details.faq-item summary::-webkit-details-marker { display: none; }
           <h4>SIGHTLINE™ PRO Enterprise</h4>
           <p>For AA/AAA game studios, film production houses, and university writing programs. 100% air-gapped local LLM readiness + priority support.</p>
         </div>
-        <div style="text-align:right;">
+        <div>
           <div style="font-size:13px;text-decoration:line-through;color:var(--text-muted);font-weight:700;">$1,999 MRP</div>
           <div style="font-size:32px;font-weight:800;color:var(--obsidian);line-height:1;">$1199 <span style="font-size:12px;font-weight:700;color:var(--text-muted);">One-Time</span></div>
+          <span class="price-jatak" onclick="copyPromoCode()">📋 Code JATAK: 40% OFF Early Bird</span>
           <a href="https://store.dodopayments.com/nikhil2bhardwaj" class="btn-obsidian" style="margin-top:10px;padding:8px 18px;font-size:12.5px;">⚡ Buy PRO Enterprise (20 Seats)</a>
         </div>
       </div>
@@ -1405,7 +1415,7 @@ details.faq-item summary::-webkit-details-marker { display: none; }
           <tr>
             <th>Capability / Studio Workspace</th>
             <th>SIGHTLINE&trade; Standard ($59 Early Bird / $99 MRP)</th>
-            <th class="pro-col">✦ SIGHTLINE&trade; PRO ($79 Early Bird / $129 MRP)</th>
+            <th class="pro-col">SIGHTLINE&trade; PRO ($79 Early Bird / $129 MRP)</th>
           </tr>
         </thead>
         <tbody>
@@ -1568,6 +1578,65 @@ details.faq-item summary::-webkit-details-marker { display: none; }
       </div>
     </div>
 
+<!-- SECURITY & FIRST-TIME LAUNCH GUIDE -->
+    <div class="bento-card white" style="max-width: 940px; margin: 0 auto 28px auto; padding: 30px;">
+      <div class="card-tag-row">
+        <span class="badge emerald">Verified Clean Binary • macOS &amp; Windows</span>
+        <span class="mono" style="font-size: 11.5px; color: var(--text-muted);">SHA-256 &amp; VirusTotal Verified</span>
+      </div>
+      <h3 style="font-size: 22px;">🛡️ Security &amp; First-Time Launch Guide</h3>
+      <p>
+        <strong>SIGHTLINE™ PRO</strong> is scanned prior to every release and is 100% malware-free. Because we are an independent software studio distributing directly to you without Apple's $99/year notarization subscription, macOS will ask for one-time permission before opening the app.
+      </p>
+      <ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 8px;">
+        <li>✅ Verified Clean on <strong>Windows &amp; macOS</strong>: Tested and verified clean across <strong>Microsoft Windows Defender, Apple XProtect, Malwarebytes, Kaspersky, Bitdefender, Norton &amp; ESET</strong>.</li>
+        <li>✅ Static Security Audited 0 High-Severity Issues: <strong>Audited with PyCQA Bandit static security analysis, pip-audit dependency verification, and our 9-Point Defensive QA Suite.</strong></li>
+        <li>✅ Zero-Leak API Key Architecture: Your LLM API key is <strong>isolated in your local OS user profile (<code>~/.sightline_secret_key.json</code>) and is never written into book project folders, HTML files, or .zip exports.</strong></li>
+        <li>✅ 100% Author IP Ownership: You retain <strong>100% sole copyright and intellectual property ownership</strong> over every state card, World Bible, Voice Anchor, and manuscript you create.</li>
+      </ul>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; margin-top: 8px;">
+        <!-- macOS Verification & Setup -->
+        <div style="background: var(--bg-app); border: 1.5px solid var(--border-soft); border-radius: 18px; padding: 20px; min-width: 0; overflow-wrap: anywhere;">
+          <h4 style="font-size: 16px; font-weight: 800; margin-bottom: 10px; color: var(--obsidian);">🍎 macOS Verification &amp; Setup</h4>
+          <ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 13.5px;">
+            <li>
+              <strong>SHA-256 Checksum:</strong>
+              <ol style="padding-left: 18px; margin-top: 6px; display: flex; flex-direction: column; gap: 6px;">
+                <li><strong>SIGHTLINE_PRO_Mac.dmg:</strong><br><code style="display: inline-block; background: var(--bg-bento); padding: 2px 6px; border-radius: 6px; font-size: 11px; word-break: break-all;">a9509a56aa57937ec1a6137b583125d89a74317df00dfeb49a7789189b3220b1</code></li>
+                <li><strong>SIGHTLINE_Standard_Mac.dmg:</strong><br><code style="display: inline-block; background: var(--bg-bento); padding: 2px 6px; border-radius: 6px; font-size: 11px; word-break: break-all;">3ad8ea7995f425698f41e74ee41f0b65d63f9b1eb3c348048ab6394d297b1115</code></li>
+              </ol>
+            </li>
+            <li>
+              <strong>How to Open (First Launch Only):</strong>
+              <ol style="padding-left: 18px; margin-top: 6px; display: flex; flex-direction: column; gap: 6px;">
+                <li>Drag <strong>SIGHTLINE™ PRO</strong> to your <code>Applications</code> folder and copy the <code>Projects</code> folder to your <code>Documents</code> or <code>Desktop</code>.</li>
+                <li>Double-click <strong>SIGHTLINE™ PRO</strong>. When the <em>"Apple could not verify..."</em> notice appears, click <strong>Done</strong>.</li>
+                <li>Open <strong>System Settings &gt; Privacy &amp; Security</strong>, scroll to the bottom, and click <strong>Open Anyway</strong>.</li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Windows Verification & Setup -->
+        <div style="background: var(--bg-app); border: 1.5px solid var(--border-soft); border-radius: 18px; padding: 20px; min-width: 0; overflow-wrap: anywhere;">
+          <h4 style="font-size: 16px; font-weight: 800; margin-bottom: 10px; color: var(--obsidian);">🪟 Windows Verification &amp; Setup</h4>
+          <ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 13.5px;">
+            <li>
+              <strong>SHA-256 Checksum:</strong>
+              <ol style="padding-left: 18px; margin-top: 6px; display: flex; flex-direction: column; gap: 6px;">
+                <li><strong>SIGHTLINE_PRO_Windows.zip:</strong><br><code style="display: inline-block; background: var(--bg-bento); padding: 2px 6px; border-radius: 6px; font-size: 11px; word-break: break-all;">a006b82317c55625c10dfea30df48dc934802f85d1991fbf60ce94b365c6060a</code></li>
+                <li><strong>Sightline_Standard_Windows.zip:</strong><br><code style="display: inline-block; background: var(--bg-bento); padding: 2px 6px; border-radius: 6px; font-size: 11px; word-break: break-all;">162661b6957cffdd288480fa76c86a580f221c3381547472e2bb05a2524ea3f2</code></li>
+              </ol>
+            </li>
+            <li>
+              <strong>How to Open (First Launch Only):</strong> If Windows SmartScreen displays <em>"Windows protected your PC"</em>, click <strong>More info</strong> and then click <strong>Run anyway</strong>.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <div class="faq-list">
       <details class="faq-item" open>
         <summary><span>1. How does the 7-Day Free Trial work on Windows and Mac?</span><span>▾</span></summary>
@@ -1611,7 +1680,8 @@ details.faq-item summary::-webkit-details-marker { display: none; }
 
 <footer style="text-align:center;padding:28px;font-size:12.5px;color:var(--text-muted);border-top:1px solid var(--border-soft);">
   <strong>SIGHTLINE&trade; &amp; SIGHTLINE&trade; PRO</strong> &bull; State, Inventory &amp; Graph-based Horizon Tracker for Localized Information &amp; Narrative Events<br>
-  Copyright &copy; 2026 Nikhil Bhardwaj. All Rights Reserved.
+  Copyright &copy; 2026 Nikhil Bhardwaj. All Rights Reserved.<br>
+  Some of the 29 Workspaces are named after the individuals that have inspired & popularised those concepts. They havn't endoresed or partnered with <strong>SIGHTLINE&trade; PRO</strong> to be featured in it.
 </footer>
 
 <div id="lightbox" onclick="this.style.display='none'"><img id="lightbox-img" src="" alt="Fullscreen Preview"></div>
