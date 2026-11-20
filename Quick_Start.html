@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIGHTLINE™ — 10-Minute Quick-Start Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg-app:#F5F6F3;--bg-bento:#EAECE8;--bg-white:#FFFFFF;--obsidian:#141517;--obsidian-soft:#232529;--gold:#E6D595;--lime:#E8F886;--text-main:#141517;--text-muted:#5F655E;--border-soft:#DCE0D9;--indigo-soft:#EEF2FF;--indigo-text:#4338CA;--amber-soft:#FEF3C7;--amber-text:#B45309;--emerald-soft:#D1FAE5;--emerald-text:#065F46;--violet-soft:#F3E8FF;--violet-text:#6D28D9;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg-app);color:var(--text-main);font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.65;padding:28px;max-width:1120px;margin:0 auto;}
+.hero{background:var(--obsidian);color:#FFFFFF;border-radius:28px;padding:30px 36px;display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:20px;flex-wrap:wrap;box-shadow:0 16px 40px rgba(20,21,23,0.14);}
+.hero h1{font-size:28px;font-weight:800;letter-spacing:-0.6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.lime-pill{background:var(--lime);color:var(--obsidian);font-size:11.5px;font-weight:800;padding:4px 12px;border-radius:999px;letter-spacing:0.2px;}
+.pro-pill{background:var(--violet-soft);color:var(--violet-text);border:1px solid rgba(109,40,217,0.28);font-size:10px;font-weight:800;padding:2px 8px;border-radius:999px;vertical-align:middle;margin-left:5px;text-transform:uppercase;}
+.all-pill{background:var(--emerald-soft);color:var(--emerald-text);font-size:10px;font-weight:800;padding:2px 8px;border-radius:999px;vertical-align:middle;margin-left:5px;text-transform:uppercase;}
+.hero-actions{display:flex;gap:8px;flex-wrap:wrap;}
+.cta-lime{background:var(--lime);color:var(--obsidian);border:none;border-radius:999px;padding:10px 18px;font-size:12.5px;font-weight:800;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;font-family:inherit;}
+.cta-dark{background:var(--obsidian-soft);color:var(--gold);border:1.5px solid rgba(230,213,149,0.45);border-radius:999px;padding:10px 18px;font-size:12.5px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;font-family:inherit;}
+.toc{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:22px;}
+.toc a{background:var(--bg-white);color:var(--obsidian);border:1px solid var(--border-soft);border-radius:999px;padding:6px 13px;font-size:12px;font-weight:700;text-decoration:none;transition:all .15s;}
+.toc a:hover{background:var(--obsidian);color:var(--lime);}
+.step-stack{display:flex;flex-direction:column;gap:18px;}
+.step-card{background:var(--bg-bento);border:1px solid var(--border-soft);border-radius:24px;padding:22px 24px;display:flex;flex-direction:column;gap:12px;}
+.step-header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.step-title{display:flex;align-items:center;gap:12px;font-size:18px;font-weight:800;}
+.step-num{width:34px;height:34px;border-radius:50%;background:var(--obsidian);color:var(--lime);display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;flex-shrink:0;}
+.time-tag{font-size:11px;font-weight:800;color:var(--text-muted);background:var(--bg-white);padding:4px 10px;border-radius:999px;border:1px solid var(--border-soft);}
+.inner-card{background:var(--bg-white);border:1px solid var(--border-soft);border-radius:16px;padding:14px 18px;font-size:13.5px;display:flex;flex-direction:column;gap:8px;}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;}
+.std-vs-pro{background:linear-gradient(135deg,#FAF8FF 0%,#F3E8FF 100%);border:1.5px dashed var(--violet-text);border-radius:14px;padding:11px 15px;font-size:12.5px;color:#3B1764;line-height:1.55;}
+.std-vs-pro strong{color:var(--obsidian);}
+.tip-box{background:#F3F8E8;border:1px solid #C8DE9A;border-radius:14px;padding:11px 15px;font-size:12.5px;color:var(--obsidian);}
+code{background:rgba(20,21,23,0.08);padding:2px 6px;border-radius:6px;font-family:ui-monospace,Consolas,monospace;font-size:11.5px;font-weight:700;}
+table{width:100%;border-collapse:collapse;font-size:12.5px;background:var(--bg-white);border-radius:14px;overflow:hidden;border:1px solid var(--border-soft);}
+th,td{padding:9px 12px;border-bottom:1px solid var(--border-soft);text-align:left;vertical-align:top;}
+th{background:var(--obsidian);color:var(--gold);font-weight:800;font-size:11.5px;text-transform:uppercase;letter-spacing:0.3px;}
+tr:last-child td{border-bottom:none;}
+.upgrade-banner{background:var(--obsidian);color:#FFFFFF;border-radius:26px;padding:24px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:20px;border:1.5px solid rgba(230,213,149,0.45);}
+.footer{text-align:center;font-size:12px;font-weight:700;color:var(--text-muted);padding:20px 0 6px 0;}
+@media print{
+  body{background:#FFFFFF;padding:10px;}
+  .hero-actions,.toc{display:none !important;}
+  .step-card{break-inside:avoid;background:#F7F8F6;}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div>
+    <h1>SIGHTLINE<sup style="font-size:14px;color:var(--gold);">&trade;</sup> <span class="lime-pill">10-MINUTE QUICK-START GUIDE</span></h1>
+    <p style="color:#9CA3AF;font-size:13px;margin-top:6px;">From Download to Your First Multi-Agent Scene, 2D Sightline Map &amp; Exported Chapter &bull; Release 2026.11</p>
+  </div>
+  <div class="hero-actions">
+    <button class="cta-dark" onclick="window.print()">🖨️ Save as PDF</button>
+    <a class="cta-lime" href="https://nikhil2bhardwaj.github.io/sightline" target="_blank">🌐 Official Website &amp; PRO Upgrade ↗</a>
+  </div>
+</header>
+
+<nav class="toc">
+  <a href="#step-1">1. Unpack &amp; Launch</a>
+  <a href="#step-2">2. Activate Key</a>
+  <a href="#step-3">3. Connect AI (BYOK / Local)</a>
+  <a href="#step-4">4. 2-Min Sherlock Demo Tour</a>
+  <a href="#step-5">5. Start Your Own Book</a>
+  <a href="#step-6">6. Run Turn &amp; Branch</a>
+  <a href="#step-7">7. Write &amp; Export Chapter</a>
+  <a href="#step-8">Shortcuts &amp; Safety Net</a>
+</nav>
+
+<main class="step-stack">
+
+  <!-- STEP 1 -->
+  <section class="step-card" id="step-1">
+    <div class="step-header">
+      <div class="step-title"><span class="step-num">1</span> Unpack &amp; Launch SIGHTLINE&trade; <span class="all-pill">Standard &amp; PRO</span></div>
+      <span class="time-tag">⏱️ ~1 Minute</span>
+    </div>
+    <div class="grid-2">
+      <div class="inner-card">
+        <strong>🪟 On Windows 10 / 11 (Uses Built-In Edge WebView2)</strong>
+        <p>1. Locate your downloaded <code>SIGHTLINE_PRO_Windows.zip</code> (or <code>SIGHTLINE_Standard_Windows.zip</code>).</p>
+        <p>2. <strong>Important:</strong> Right-click the <code>.zip</code> file and click <strong>Extract All...</strong> into a normal folder (e.g. <code>C:\SIGHTLINE</code>). <em>Never double-click <code>Sightline.exe</code> from inside an unextracted zip preview, as it needs its <code>_internal</code> folder beside it!</em></p>
+        <p>3. Open the extracted folder and double-click <strong><code>Sightline.exe</code></strong>. (If Windows SmartScreen shows a first-run publisher prompt, click <strong>More info &rarr; Run anyway</strong>).</p>
+      </div>
+      <div class="inner-card">
+        <strong>🍎 On Apple macOS (Uses Built-In Apple WKWebView)</strong>
+        <p>1. Double-click <code>SIGHTLINE_PRO_Mac.dmg</code> (or <code>SIGHTLINE_Standard_Mac.dmg</code>).</p>
+        <p>2. Drag <strong><code>SIGHTLINE PRO.app</code></strong> into your <strong><code>Applications</code></strong> folder (you can also copy the included <code>Projects</code> demo folder to your Documents).</p>
+        <p>3. <strong>First Launch Only:</strong> Open <code>Applications</code>, <strong>Right-Click (Control + Click)</strong> on <code>SIGHTLINE PRO.app</code>, and click <strong>Open</strong>. After the first launch, it opens normally with a double-click.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 2 -->
+  <section class="step-card" id="step-2">
+    <div class="step-header">
+      <div class="step-title"><span class="step-num">2</span> Activate Your License Key (or 7-Day Free Trial) <span class="all-pill">Standard &amp; PRO</span></div>
+      <span class="time-tag">⏱️ ~30 Seconds</span>
+    </div>
+    <div class="inner-card">
+      <p>1. On the Obsidian Lock Screen, paste the License Key from your Dodo Payments email (<code>XXXX-XXXX-XXXX-XXXX</code>) and click <strong><code>🔓 Activate SIGHTLINE&trade;</code></strong>.</p>
+      <p>2. <strong>✈️ 14-Day Offline Writing Lease:</strong> Once activated, SIGHTLINE&trade; binds securely to your computer so you can write <strong>100% offline</strong> on flights or retreats for up to 14 days at a time (2 days offline max during a 7-Day Free Trial).</p>
+      <p>3. <strong>🔄 Upgrading from a 7-Day Free Trial to a Lifetime Key (or Moving Between Windows &amp; Mac):</strong> Open the Left Console (<code>▶</code>), click <strong><code>🔑 License</code></strong> at the bottom footer, click <strong><code>🔓 Deactivate This PC</code></strong>, and paste your new Lifetime Key into the Lock Screen. <em>All of your projects and manuscripts remain untouched!</em></p>
+    </div>
+  </section>
+
+  <!-- STEP 3 -->
+  <section class="step-card" id="step-3">
+    <div class="step-header">
+      <div class="step-title"><span class="step-num">3</span> Connect Your AI Brain (Free Cloud Tier, BYOK, or $0 Offline Local AI) <span class="all-pill">Standard &amp; PRO</span></div>
+      <span class="time-tag">⏱️ ~1 Minute</span>
+    </div>
+    <div class="inner-card">
+      <p>Click the top-left <strong><code>▶</code> (Play)</strong> button on the black Left Rail to open the <strong>Sightline Console</strong>, then click <strong><code>🎛️ AI Provider &amp; Asymmetric Models</code></strong> to expand it. Choose any provider below:</p>
+      <table>
+        <thead>
+          <tr><th>Setup Option</th><th>Provider Dropdown</th><th>Base URL</th><th>Recommended Char Model (Fast)</th><th>Recommended GM Model (Deep)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Free / Ultra-Fast Cloud</strong><br><span style="font-size:11px;color:var(--text-muted);">Key at <code>console.groq.com/keys</code></span></td><td><code>OpenAI Compatible</code></td><td><code>https://api.groq.com/openai/v1</code></td><td><code>qwen/qwen3.8-27b</code></td><td><code>openai/gpt-oss-120b</code></td></tr>
+          <tr><td><strong>Google Gemini (Free Tier)</strong><br><span style="font-size:11px;color:var(--text-muted);">Key at <code>aistudio.google.com/apikey</code></span></td><td><code>Gemini</code></td><td><em>Auto-filled</em></td><td><code>gemini-2.5-flash</code></td><td><code>gemini-2.5-pro</code></td></tr>
+          <tr><td><strong>OpenAI / Anthropic</strong><br><span style="font-size:11px;color:var(--text-muted);">Wholesale BYOK</span></td><td><code>OpenAI</code> or <code>Anthropic</code></td><td><em>Auto-filled</em></td><td><code>gpt-4o-mini</code> / <code>claude-3-5-haiku-latest</code></td><td><code>gpt-4o</code> / <code>claude-3-7-sonnet-latest</code></td></tr>
+          <tr><td><strong>$0.00 Offline Local AI</strong><br><span style="font-size:11px;color:var(--text-muted);">Install <code>ollama.com</code> &amp; run <code>ollama run llama3.1:8b</code></span></td><td><code>Local</code></td><td><code>http://127.0.0.1:11434/v1</code><br><em>(LM Studio: port <code>1234</code>)</em></td><td><code>llama3.1:8b</code><br><em>(Leave API Key blank)</em></td><td><code>llama3.1:8b</code><br><em>(or <code>qwen2.5:14b</code>)</em></td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:4px;">Paste your key into <strong>LLM API Key</strong>, click <strong><code>💾 Save AI Config (0 LLM)</code></strong>, and click <strong><code>🔌 Test AI Connection</code></strong> until you see the green <code>✅ AI Connected!</code> toast.</p>
+      <div class="tip-box"><strong>🔒 Zero-Leak Privacy:</strong> Your API key is stored strictly in your OS user profile (<code>~/.sightline_secret_key.json</code>)—never inside your book folder or <code>.zip</code> exports. And because SIGHTLINE&trade; only sends the single current State Card (~700 tokens), <strong>Turn 100 costs the exact same tiny tokens as Turn 1!</strong></div>
+    </div>
+  </section>
+
+  <!-- STEP 4 -->
+  <section class="step-card" id="step-4">
+    <div class="step-header">
+      <div class="step-title"><span class="step-num">4</span> Take the 2-Minute <em>Sherlock Holmes</em> Interactive Tour</div>
+      <span class="time-tag">⏱️ ~2 Minutes</span>
+    </div>
+    <div class="inner-card">
+      <p>Before building your own story, explore the pre-loaded Public-Domain <strong><code>Projects/Demo_Sherlock_Holmes</code></strong> mystery (<em>A Scandal in Bohemia</em> — <code>SHERLOCK HOLMES</code>, <code>IRENE ADLER</code>, <code>DR. JOHN WATSON</code>, and <code>GODFREY NORTON</code>). Open <code>📂 Project Switcher</code> &rarr; <code>Browse Folder...</code> &rarr; select <code>Projects/Demo_Sherlock_Holmes</code> and try these <strong>4 clicks</strong>:</p>
+      <p><strong>1. Inspect the 2D Stage Map &amp; Trust Network (Tab 4):</strong> Click <strong><code>IRENE ADLER</code></strong> on <code>State 1 (Branch A)</code>, then click <strong><code>Stage &amp; Sightline</code></strong> in the Right Inspector. Notice how Briony Lodge Drawing Room, the Garden Hedges, and the Carriage are separated with live sightline rays and Directed Trust arrows!</p>
+      <p><strong>2. Inspect Subtext Bluffs, Audio Table-Read &amp; Split-Mind Debate (Tab 2):</strong> Click <strong><code>Turn Action</code></strong> in the Right Inspector. Read Holmes's and Irene's isolated <code>Internal Thought</code> vs. <code>Spoken Dialogue</code>, click <strong><code>🎧 Full Scene</code></strong> <span class="pro-pill">PRO</span> to hear the offline audio table-read while the speaker pulses on the 2D map, or click <strong><code>🧠 Split-Mind Debate</code></strong> <span class="pro-pill">PRO</span>!</p>
+      <p><strong>3. Step Inside Sherlock Holmes's Skull (Rashomon Lens):</strong> In the Top Header, click <strong><code>👁️ Lens: Omniscient ▾</code></strong> <span class="pro-pill">PRO</span> and select <strong><code>👁️ POV: SHERLOCK HOLMES</code></strong>. Watch unwitnessed turns dim, blocked characters vanish into <code>? UNKNOWN</code>, and hidden items appear as dashed violet <strong><code>👻 Phantom Pills</code></strong>!</p>
+      <p><strong>4. Run the Zero-Token Continuity Linter:</strong> Click <strong><code>🛡️ Linter</code></strong> in the Top Header to see how SIGHTLINE&trade; automatically flags Unfired Chekhov's Guns and unresolved Blind Spots at <code>$0.00</code> token cost.</p>
+      <div class="std-vs-pro">
+        <strong>📌 Using SIGHTLINE&trade; Standard?</strong> You will see the full Multiverse Canvas, Character Swimlanes, 2D Sightline Map, Trust Matrix, Turn Actions, and Chekhov's Gun / Blind Spot Linter. You will <strong>not</strong> see the <code>👁️ Lens</code> Rashomon dropdown, <code>🏺 Provenance</code>, <code>💡 Insights</code>, <code>🔥 Heatmap</code>, <code>👁️+👂 Dual Acoustic Toggle</code>, <code>🤥 Lie-Detector</code>, <code>🎧 Audio Table-Read</code>, or <code>🧠 Split-Mind Debate</code>—those unlock instantly when you upgrade to <strong>SIGHTLINE&trade; PRO</strong>!
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 5 -->
+  <section class="step-card" id="step-5">
+    <div class="step-header">
+      <div class="step-title"><span class="step-num">5</span> Start Your Own Novel, Screenplay, or Game World</div>
+      <span class="time-tag">⏱️ ~2 Minutes</span>
+    </div>
+    <div class="grid-2">
+      <div class="inner-card">
+        <strong>Path A: Guided Blank Starter <span class="all-pill">Standard &amp; PRO</span></strong>
+        <p>1. Open the Left Console (<code>▶</code>) &rarr; <strong><code>📂 Project Switcher</code></strong>.</p>
+        <p>2. Type a new folder path (e.g. <code>Projects/My_Novel</code>) and click <strong><code>Load / Scaffold Project (0 LLM)</code></strong>. SIGHTLINE&trade; creates a self-guiding 2-character starter scene (<code>PROTAGONIST</code> &amp; <code>RIVAL</code>).</p>
+        <p>3. Click <strong><code>Cast (2) ▾</code></strong> in the Top Bar &rarr; click <strong><code>✎ Voice</code></strong> to rename your characters and set their speech cadence &amp; Hard Never-Rules, or click <strong><code>+ Spawn Character</code></strong>.</p>
+        <p>4. Click <strong><code>✎ Edit</code></strong> on any card in the Right Inspector to customize starting locations, items, and secrets in <code>0.0s</code>, and click <strong><code>▤</code></strong> on the Left Rail to add World Bible lore.</p>
+      </div>
+      <div class="inner-card">
+        <strong>Path B: 1-Click Synopsis Auto-Ingest <span class="pro-pill">PRO ONLY</span></strong>
+        <p>Already have a story outline, character bible, or rough Chapter 1 written?</p>
+        <p>1. Inside <strong><code>📂 Project, Demo, Ingest &amp; Backup</code></strong>, click <strong><code>⚡ Auto-Ingest Synopsis / Chapter (1 GM)</code></strong>.</p>
+        <p>2. Paste your raw synopsis or opening chapter and click <strong><code>⚡ Generate Turn 0, World Bible &amp; Voice Anchors</code></strong>.</p>
+        <p>3. In one single AI call, SIGHTLINE&trade; PRO automatically builds your opening cast, locations, inventories, secrets, blind spots, <code>World_Bible.md</code>, and <code>Voice_Anchors.md</code>!</p>
+      </div>
+    </div>
+    <div class="std-vs-pro">
+      <strong>📌 Using SIGHTLINE&trade; Standard?</strong> Use <strong>Path A</strong> to scaffold and edit your cast at <code>0 LLM</code> cost. In <strong>SIGHTLINE&trade; PRO</strong>, you also unlock <strong>Path B (1-Click Auto-Ingest)</strong>, <strong>🗑️ 2-Mode Character Deletion</strong> (Forward Exit vs. Full Project Purge), <strong>📦 1-Click Project .zip Export</strong>, and <strong>🕰️ Read-Only HTML Time-Capsules</strong> for sharing with editors!
+    </div>
+  </section>
+
+  <!-- STEP 6 -->
+  <section class="step-card" id="step-6">
+    <div class="step-header">
+      <div class="step-title"><span class="step-num">6</span> Run Your First Scene Turn, Branch "What-Ifs" &amp; Merge Timelines</div>
+      <span class="time-tag">⏱️ ~2 Minutes</span>
+    </div>
+    <div class="inner-card">
+      <p>1. <strong>Stage Your Cast (Save 60–80% on Tokens!):</strong> In the Left Console's <strong>Green Room Stage</strong>, keep only the characters physically in this scene active (<code>#1</code>, <code>#2</code>) and click off-screen characters to bench them into <strong><code>💤 Dormant</code></strong> (<code>0 tokens</code>, zero meta-spoilers!).</p>
+      <p>2. <strong>Optional Tension Clock:</strong> Add a countdown clock like <code>Border Inspection=1/4(Danger)</code> if the scene has a ticking time-bomb.</p>
+      <p>3. <strong>Write Your Scene Nudge &amp; Run:</strong> Write 1–2 sentences describing the physical trigger or event happening right now, then press <strong><code>Ctrl + Enter</code></strong> (or click <strong><code>▶ Run Turn in Sightline</code></strong>).</p>
+      <p>4. <strong>Branch &amp; Converge:</strong> Every turn generates <strong>Branch A (Canon)</strong> plus dashed Ghost Cards for <strong>Branch B (High Chaos)</strong> and <strong>Branch C (Strategic Twist)</strong>. Click any Ghost Card with <strong><code>📌 Branch Selected</code></strong> active to play out an alternate timeline—or click <strong><code>⑂</code> (3-Way Branch Merger)</strong> on the Left Rail to fuse the best outcomes of two branches into one canonical hub at <code>0 LLM</code> cost!</p>
+      <div class="std-vs-pro">
+        <strong>📌 Using SIGHTLINE&trade; Standard?</strong> You get full 3-Branch Multiverse turns, Dormant Green Room savings, Tension Clocks, `@world_turn`, and the 3-Way Branch Merger. <strong>SIGHTLINE&trade; PRO</strong> supercharges plotting with <strong>🌌 Parallel 2-Branch Runs</strong>, <strong>🎴 Salience Storylet Set-Pieces</strong>, <strong>📌 Floating Destination Beats + 🎯 Vince Gilligan's Reverse-Causal Bridge Solver</strong>, <strong>GRRM's Meereenese Knot Arrival Order</strong> in the Merger, <strong>🕵️ 1-Click Red-Team This Scene</strong>, and <strong>🌊 Downstream Cascade Edits</strong>!
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 7 -->
+  <section class="step-card" id="step-7">
+    <div class="step-header">
+      <div class="step-title"><span class="step-num">7</span> Draft &amp; Export Your Chapter (Word, Obsidian, Screenplay &amp; Games)</div>
+      <span class="time-tag">⏱️ ~1 Minute</span>
+    </div>
+    <div class="inner-card">
+      <p>1. Click the <strong><code>✎</code> (Pen)</strong> icon on the Left Rail (or <strong><code>✎ Manuscript Studio</code></strong> in the Right Inspector).</p>
+      <p>2. Click <strong><code>🔗 Trace Timeline Path</code></strong> to compile every beat from Turn 0 to your selected state into an airtight, state-constrained Chapter Blueprint (listing every character's Voice Anchor and <code>🙈 MUST NOT KNOW</code> blind spots).</p>
+      <p>3. Draft your prose in the right-hand editor (with Book Serif typography and <strong><code>⛶ Zen Mode</code></strong> <span class="pro-pill">PRO</span>) and click your preferred export button: <strong><code>⬇ Word (.doc)</code></strong>, <strong><code>⬇ Obsidian</code></strong>, <strong><code>⬇ .md</code></strong>, <strong><code>🎬 .fountain</code></strong> <span class="pro-pill">PRO</span>, <strong><code>🎮 .ink</code></strong> <span class="pro-pill">PRO</span>, or <strong><code>🧶 .yarn</code></strong> <span class="pro-pill">PRO</span>!</p>
+      <div class="std-vs-pro">
+        <strong>📌 Using SIGHTLINE&trade; Standard?</strong> You get the Multi-State Chapter Blueprint Compiler, browser scratchpad, and 1-click exports to <strong><code>.md</code></strong>, <strong>Obsidian YAML</strong>, and formatted <strong>Word (<code>.doc</code>)</strong>. <strong>SIGHTLINE&trade; PRO</strong> upgrades this into a <strong>Disk-Backed <code>/Manuscript</code> Studio</strong> with <code>⛶ Zen Mode</code>, Formatting Toolbar, <strong><code>🔍 0-LLM Draft Sightline Leak Scanner</code></strong>, <strong><code>🔄 1-GM Retro-Con Sync</code></strong> (syncs improvised prose changes back to your State Cards!), <strong><code>🎥 Fair-Play Reader Epistemic Ledger</code></strong>, <strong><code>◀/▶ Non-Linear Flashback Ordering</code></strong>, and <strong><code>.fountain</code> / <code>.ink</code> / <code>.yarn</code></strong> exporters!
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 8: CHEAT SHEET -->
+  <section class="step-card" id="step-8">
+    <div class="step-header">
+      <div class="step-title"><span class="step-num">⚡</span> Essential Hotkeys &amp; Safety Net <span class="all-pill">Standard &amp; PRO</span></div>
+      <span class="time-tag">Quick Reference</span>
+    </div>
+    <div class="grid-2">
+      <div class="inner-card">
+        <strong>⌨️ Keyboard Shortcuts</strong>
+        <p>&bull; <code>Esc</code> — Close any open modal window immediately.</p>
+        <p>&bull; <code>Ctrl + Enter</code> — Run Turn (while typing in Scene Nudge).</p>
+        <p>&bull; <code>Ctrl + S</code> — Instant disk save inside Manuscript Studio <span class="pro-pill">PRO</span>.</p>
+        <p>&bull; <code>Ctrl + Click</code> (in <code>Cast ▾</code>) — Multi-select character swimlanes.</p>
+      </div>
+      <div class="inner-card">
+        <strong>🛡️ Everyday Studio Safety Net</strong>
+        <p>&bull; <strong><code>🌙 Night</code> / <code>☀️ Day</code> (Top Bar):</strong> Toggle Soft Dusk Eye-Care Mode.</p>
+        <p>&bull; <strong><code>⏪ Undo Last Turn</code> &amp; <code>🕰️ Restore Backup</code>:</strong> Inside <code>📂 Project Switcher</code>.</p>
+        <p>&bull; <strong><code>📂 Open Current Folder in Explorer</code>:</strong> View your Markdown files on PC/Mac.</p>
+        <p>&bull; <strong><code>🔔 Hub</code> &amp; <code>💬 Feedback</code>:</strong> Check for updates or send a Bug Report / Feature Request.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="upgrade-banner">
+  <div>
+    <div style="font-size:11px;font-weight:800;color:var(--gold);letter-spacing:0.6px;text-transform:uppercase;">BUY ONCE, OWN FOREVER &bull; ZERO MONTHLY SUBSCRIPTIONS</div>
+    <div style="font-size:19px;font-weight:800;margin-top:4px;">Started on SIGHTLINE&trade; Standard or the 7-Day Free Trial?</div>
+    <div style="font-size:12.5px;color:#D1D5DB;margin-top:4px;">Unlock all 29 PRO Showrunner tools (Rashomon Lens, Dual Acoustic Raycaster, Disk Manuscript Studio, Reverse-Causal Solver &amp; .fountain/.ink Exporters). Use Early-Bird code <code style="background:#232529;color:var(--lime);">JATAK</code> for <strong>40% OFF</strong>!</div>
+  </div>
+  <a class="cta-lime" href="https://nikhil2bhardwaj.github.io/sightline" target="_blank">🚀 Upgrade to SIGHTLINE&trade; PRO ↗</a>
+</div>
+
+<footer class="footer">SIGHTLINE&trade; &bull; Copyright &copy; 2026 Nikhil Bhardwaj. All Rights Reserved. &bull; Click <code>?</code> inside SIGHTLINE&trade; anytime for the Full Illustrated Manual.</footer>
+</body>
+</html>
